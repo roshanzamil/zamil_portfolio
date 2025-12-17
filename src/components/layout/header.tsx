@@ -8,10 +8,10 @@ import { Menu, Code } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const navLinks = [
-  { href: '#about', label: 'About' },
-  { href: '#projects', label: 'Projects' },
-  { href: '#skills', label: 'Skills' },
-  { href: '#contact', label: 'Contact' },
+  { href: '/about', label: 'About' },
+  { href: '/projects', label: 'Projects' },
+  { href: '/skills', label: 'Skills' },
+  { href: '/contact', label: 'Contact' },
 ];
 
 export default function Header() {
@@ -44,7 +44,7 @@ export default function Header() {
             <Link
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-foreground/80 transition-colors hover:text-primary"
+              className="text-base font-medium text-foreground/80 transition-colors hover:text-primary"
             >
               {link.label}
             </Link>

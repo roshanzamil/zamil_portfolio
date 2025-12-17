@@ -32,10 +32,10 @@ export default function HeroSection() {
           </div>
           <div className="flex flex-col sm:flex-row gap-4">
             <Button asChild size="lg">
-              <Link href="#contact">Contact Me</Link>
+              <Link href="/contact">Contact Me</Link>
             </Button>
             <Button asChild variant="outline" size="lg">
-              <Link href="#projects">View My Work <ArrowDown className="ml-2 h-4 w-4" /></Link>
+              <Link href="/projects">View My Work <ArrowDown className="ml-2 h-4 w-4" /></Link>
             </Button>
           </div>
         </div>
