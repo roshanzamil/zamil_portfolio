@@ -6,7 +6,8 @@ import React from 'react';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 const toEmail = process.env.TO_EMAIL as string;
-const fromEmail = process.env.FROM_EMAIL as string;
+// The from email must be a specific value for Resend's test environment.
+const fromEmail = 'onboarding@resend.dev';
 
 const formSchema = z.object({
   name: z.string(),
@@ -25,7 +26,8 @@ export async function sendEmail(formData: z.infer<typeof formSchema>) {
       from: `Contact Form <${fromEmail}>`,
       to: [toEmail],
       subject: `New Message from ${name} via your Portfolio`,
-      reply_to: email,
+      // The user's email is in the body, so reply_to is not strictly needed for this form
+      // and can cause issues on the free tier.
       react: React.createElement(ContactFormEmail, {
         name,
         email,
