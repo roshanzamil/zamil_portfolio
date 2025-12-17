@@ -10,7 +10,7 @@ export function ThemeToggleButton() {
   const { theme, setTheme } = useTheme()
 
   return (
-    <div className="fixed bottom-5 left-5 z-50">
+    <div className="fixed bottom-5 right-5 z-50">
         <Button 
             variant="outline" 
             size="icon"
