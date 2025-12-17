@@ -54,7 +54,7 @@ const projects = [
     description: 'A B2B platform for industrial solutions and supplies.',
     image: PlaceHolderImages.find((img) => img.id === 'project-3'), // Re-using an image
     tags: ['B2B', 'E-commerce', 'Industrial'],
-    liveUrl: 'https://industrialsolution.ae',
+    liveUrl: 'https://www.industrialsolution.ae/',
   }
 ];
 
