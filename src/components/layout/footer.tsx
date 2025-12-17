@@ -9,7 +9,7 @@ export default function Footer() {
     <footer className="bg-muted/50 border-t">
       <div className="container mx-auto flex flex-col items-center justify-between gap-4 px-4 py-8 sm:flex-row md:px-6">
         <p className="text-sm text-muted-foreground">
-          &copy; {year} Roshan. All rights reserved.
+          &copy; {year} Roshan Zamil Moulana. All rights reserved.
         </p>
         <div className="flex items-center gap-2">
           <Button variant="ghost" size="icon" asChild>
@@ -19,7 +19,7 @@ export default function Footer() {
             </Link>
           </Button>
           <Button variant="ghost" size="icon" asChild>
-            <Link href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+            <Link href="https://linkedin.com/in/roshan-zamil/" target="_blank" rel="noopener noreferrer">
               <Linkedin className="h-5 w-5" />
               <span className="sr-only">LinkedIn</span>
             </Link>

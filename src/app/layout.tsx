@@ -6,8 +6,8 @@ import Header from '@/components/layout/header';
 import Footer from '@/components/layout/footer';
 
 export const metadata: Metadata = {
-  title: 'Roshan.dev | Web Developer Portfolio',
-  description: 'The professional portfolio of Roshan, a passionate web developer showcasing skills and projects.',
+  title: 'Roshan Zamil Moulana | Full Stack Developer',
+  description: 'The professional portfolio of Roshan Zamil Moulana, a passionate Full Stack Developer and E-Commerce Specialist.',
 };
 
 export default function RootLayout({

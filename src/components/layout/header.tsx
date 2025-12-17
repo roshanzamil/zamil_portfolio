@@ -36,7 +36,7 @@ export default function Header() {
       <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
         <Link href="/" className="flex items-center gap-2 font-bold text-lg">
           <Code className="h-6 w-6 text-primary" />
-          <span>Roshan.dev</span>
+          <span>RZM.dev</span>
         </Link>
 
         <nav className="hidden items-center gap-6 md:flex">
@@ -63,7 +63,7 @@ export default function Header() {
               <div className="grid gap-4 py-6">
                 <Link href="/" className="flex items-center gap-2 font-bold text-lg mb-4" onClick={() => setMobileMenuOpen(false)}>
                   <Code className="h-6 w-6 text-primary" />
-                  <span>Roshan.dev</span>
+                  <span>RZM.dev</span>
                 </Link>
                 {navLinks.map((link) => (
                   <Link

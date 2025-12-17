@@ -9,7 +9,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
 import { useToast } from '@/hooks/use-toast';
 import { sendContactMessage } from '@/lib/actions';
-import { Loader2 } from 'lucide-react';
+import { Loader2, Mail, Phone, MapPin } from 'lucide-react';
 
 const formSchema = z.object({
   name: z.string().min(2, { message: 'Name must be at least 2 characters.' }),
@@ -60,57 +60,82 @@ export default function ContactSection() {
             Have a question or want to work together? Send me a message!
           </p>
         </div>
-        <div className="mx-auto w-full max-w-xl">
-          <Form {...form}>
-            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-              <FormField
-                control={form.control}
-                name="name"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Name</FormLabel>
-                    <FormControl>
-                      <Input placeholder="Your Name" {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-              <FormField
-                control={form.control}
-                name="email"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Email</FormLabel>
-                    <FormControl>
-                      <Input placeholder="your.email@example.com" {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-              <FormField
-                control={form.control}
-                name="message"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Message</FormLabel>
-                    <FormControl>
-                      <Textarea placeholder="Tell me how I can help you." rows={5} {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-              <Button type="submit" className="w-full" size="lg" disabled={isSubmitting}>
-                {isSubmitting ? (
-                  <>
-                    <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Sending...
-                  </>
-                ) : 'Send Message'}
-              </Button>
-            </form>
-          </Form>
+        <div className="grid lg:grid-cols-2 gap-12">
+          <div className="space-y-6">
+            <div className="flex items-start gap-4">
+              <Mail className="h-6 w-6 text-primary mt-1"/>
+              <div>
+                <h3 className="font-semibold">Email</h3>
+                <a href="mailto:rshn.zamil@gmail.com" className="text-muted-foreground hover:text-primary">rshn.zamil@gmail.com</a>
+              </div>
+            </div>
+            <div className="flex items-start gap-4">
+              <Phone className="h-6 w-6 text-primary mt-1"/>
+              <div>
+                <h3 className="font-semibold">Phone</h3>
+                <p className="text-muted-foreground">+971 588 254 527</p>
+              </div>
+            </div>
+            <div className="flex items-start gap-4">
+              <MapPin className="h-6 w-6 text-primary mt-1"/>
+              <div>
+                <h3 className="font-semibold">Location</h3>
+                <p className="text-muted-foreground">Al – Karama, Dubai</p>
+              </div>
+            </div>
+          </div>
+          <div className="w-full">
+            <Form {...form}>
+              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+                <FormField
+                  control={form.control}
+                  name="name"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Name</FormLabel>
+                      <FormControl>
+                        <Input placeholder="Your Name" {...field} />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                <FormField
+                  control={form.control}
+                  name="email"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Email</FormLabel>
+                      <FormControl>
+                        <Input placeholder="your.email@example.com" {...field} />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                <FormField
+                  control={form.control}
+                  name="message"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Message</FormLabel>
+                      <FormControl>
+                        <Textarea placeholder="Tell me how I can help you." rows={5} {...field} />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                <Button type="submit" className="w-full" size="lg" disabled={isSubmitting}>
+                  {isSubmitting ? (
+                    <>
+                      <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Sending...
+                    </>
+                  ) : 'Send Message'}
+                </Button>
+              </form>
+            </Form>
+          </div>
         </div>
       </div>
     </section>

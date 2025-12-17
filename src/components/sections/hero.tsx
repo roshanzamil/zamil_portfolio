@@ -24,10 +24,10 @@ export default function HeroSection() {
           )}
           <div className="space-y-2">
             <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl font-headline text-primary">
-              Roshan
+              Roshan Zamil Moulana
             </h1>
             <p className="max-w-[700px] mx-auto text-foreground/80 md:text-xl">
-              A passionate Web Developer specializing in creating modern, responsive, and user-friendly web applications.
+              Full Stack Developer – E-Commerce Specialist
             </p>
           </div>
           <div className="flex flex-col sm:flex-row gap-4">

@@ -15,10 +15,10 @@ export default function AboutSection() {
             </h2>
             <div className="text-foreground/80 space-y-4 text-base md:text-lg">
               <p>
-                Hello! I'm Roshan, a dedicated web developer with a passion for building beautiful and functional websites and applications. My journey into code started years ago, and since then, I've been honing my skills in both front-end and back-end technologies.
+                I am an accomplished Full Stack Developer and E-Commerce Specialist. I have successfully developed a million-euro web application that increased revenue by 35%, improved customer engagement by 50%, and optimized conversion rates by 30% using sales funnel techniques. 
               </p>
               <p>
-                I thrive on solving complex problems and turning ideas into reality. I'm proficient in a range of technologies, including React, Node.js, and modern JavaScript, and I'm always eager to learn more. When I'm not coding, I enjoy exploring new technologies, contributing to open-source projects, and grabbing a good cup of coffee.
+                Skilled in PHP, NodeJS, Symfony, Laravel, Java, Python, AngularJS, ReactJS, and cloud infrastructure, with expertise in API integrations, DevOps, CI/CD pipelines, and database performance optimization. I have a proven ability to lead cross-functional teams, streamline development processes, and deliver scalable, high-performing applications.
               </p>
             </div>
           </div>

@@ -1,38 +1,47 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Code, Database, Globe, Server, Settings, TerminalSquare } from 'lucide-react';
+import { Code, Database, Server, Settings, TerminalSquare, Star, Wind } from 'lucide-react';
 import { ReactIcon, NodejsIcon, JavaScriptIcon, HtmlIcon, CssIcon, TypeScriptIcon } from '@/components/icons';
 
 const skillsData = [
   {
-    category: 'Frontend',
-    icon: <Globe className="h-8 w-8 text-primary" />,
+    category: 'Languages & Frameworks',
+    icon: <Code className="h-8 w-8 text-primary" />,
     skills: [
       { name: 'HTML5', icon: <HtmlIcon className="h-8 w-8" /> },
       { name: 'CSS3', icon: <CssIcon className="h-8 w-8" /> },
       { name: 'JavaScript', icon: <JavaScriptIcon className="h-8 w-8" /> },
-      { name: 'TypeScript', icon: <TypeScriptIcon className="h-8 w-8" /> },
-      { name: 'React', icon: <ReactIcon className="h-8 w-8" /> },
-      { name: 'Next.js', icon: <Code className="h-8 w-8" /> },
+      { name: 'PHP', icon: <Code className="h-8 w-8" /> },
+      { name: 'Java', icon: <Code className="h-8 w-8" /> },
+      { name: 'Python', icon: <Code className="h-8 w-8" /> },
+      { name: 'ReactJS', icon: <ReactIcon className="h-8 w-8" /> },
+      { name: 'AngularJS', icon: <Code className="h-8 w-8" /> },
+      { name: 'NodeJS', icon: <NodejsIcon className="h-8 w-8" /> },
+      { name: 'Symfony', icon: <Code className="h-8 w-8" /> },
+      { name: 'Laravel', icon: <Code className="h-8 w-8" /> },
     ],
   },
   {
-    category: 'Backend',
+    category: 'Platforms & Infrastructure',
     icon: <Server className="h-8 w-8 text-primary" />,
     skills: [
-      { name: 'Node.js', icon: <NodejsIcon className="h-8 w-8" /> },
-      { name: 'Express.js', icon: <Code className="h-8 w-8" /> },
-      { name: 'MongoDB', icon: <Database className="h-8 w-8" /> },
-      { name: 'Firebase', icon: <Code className="h-8 w-8" /> },
+      { name: 'Cloud Infrastructure', icon: <Wind className="h-8 w-8" /> },
+      { name: 'Shopify', icon: <Star className="h-8 w-8" /> },
+      { name: 'WooCommerce', icon: <Star className="h-8 w-8" /> },
+      { name: 'RESTful APIs', icon: <Code className="h-8 w-8" /> },
+      { name: 'WebSockets', icon: <Code className="h-8 w-8" /> },
+      { name: 'Payment Gateways', icon: <Code className="h-8 w-8" /> },
     ],
   },
   {
-    category: 'Tools & Others',
+    category: 'Tools & Expertise',
     icon: <Settings className="h-8 w-8 text-primary" />,
     skills: [
+      { name: 'Digital Marketing / SEO', icon: <Code className="h-8 w-8" /> },
+      { name: 'Figma', icon: <Code className="h-8 w-8" /> },
+      { name: 'Adobe XD', icon: <Code className="h-8 w-8" /> },
       { name: 'Git & GitHub', icon: <TerminalSquare className="h-8 w-8" /> },
-      { name: 'REST APIs', icon: <Code className="h-8 w-8" /> },
-      { name: 'Jest', icon: <Code className="h-8 w-8" /> },
-      { name: 'Docker', icon: <Code className="h-8 w-8" /> },
+      { name: 'Database Management', icon: <Database className="h-8 w-8" /> },
+      { name: 'DevOps/CI-CD', icon: <Code className="h-8 w-8" /> },
     ],
   },
 ];
