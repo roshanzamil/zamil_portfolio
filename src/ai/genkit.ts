@@ -3,5 +3,5 @@ import {openAI} from 'genkitx-openai';
 
 export const ai = genkit({
   plugins: [openAI()],
-  model: 'gpt-4o',
+  model: 'openai/gpt-4o',
 });
