@@ -10,6 +10,7 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '
 import { useToast } from '@/hooks/use-toast';
 import { sendContactMessage } from '@/lib/actions';
 import { Loader2, Mail, Phone, MapPin } from 'lucide-react';
+import { Animated } from '@/components/ui/animated';
 
 const formSchema = z.object({
   name: z.string().min(2, { message: 'Name must be at least 2 characters.' }),
@@ -50,18 +51,18 @@ export default function ContactSection() {
   }
 
   return (
-    <section id="contact" className="w-full py-16 md:py-24 lg:py-32 bg-muted/30">
+    <section id="contact" className="w-full py-16 md:py-24 lg:py-32 bg-muted/30 overflow-hidden">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="space-y-4 text-center mb-12">
+        <Animated as="div" className="space-y-4 text-center mb-12">
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl font-headline">
             Get In Touch
           </h2>
           <p className="max-w-[700px] mx-auto text-foreground/80 md:text-xl">
             Have a question or want to work together? Send me a message!
           </p>
-        </div>
+        </Animated>
         <div className="grid lg:grid-cols-2 gap-12">
-          <div className="space-y-6">
+          <Animated as="div" className="space-y-6">
             <div className="flex items-start gap-4">
               <Mail className="h-6 w-6 text-primary mt-1"/>
               <div>
@@ -83,8 +84,8 @@ export default function ContactSection() {
                 <p className="text-muted-foreground">Al – Karama, Dubai</p>
               </div>
             </div>
-          </div>
-          <div className="w-full">
+          </Animated>
+          <Animated as="div" delay={0.2} className="w-full">
             <Form {...form}>
               <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
                 <FormField
@@ -135,7 +136,7 @@ export default function ContactSection() {
                 </Button>
               </form>
             </Form>
-          </div>
+          </Animated>
         </div>
       </div>
     </section>

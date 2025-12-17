@@ -3,41 +3,44 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { ArrowDown } from 'lucide-react';
+import { Animated } from '@/components/ui/animated';
 
 export default function HeroSection() {
   const avatar = PlaceHolderImages.find((img) => img.id === 'roshan-avatar');
 
   return (
-    <section id="home" className="relative w-full h-[calc(100svh-4rem)] flex items-center justify-center">
+    <section id="home" className="relative w-full h-[calc(100svh-4rem)] flex items-center justify-center overflow-hidden">
       <div className="container mx-auto px-4 md:px-6 text-center">
         <div className="flex flex-col items-center space-y-6">
           {avatar && (
-            <Image
-              src={avatar.imageUrl}
-              alt={avatar.description}
-              width={144}
-              height={144}
-              className="rounded-full object-cover border-4 border-primary shadow-lg"
-              data-ai-hint={avatar.imageHint}
-              priority
-            />
+            <Animated as="div" delay={0.1}>
+              <Image
+                src={avatar.imageUrl}
+                alt={avatar.description}
+                width={144}
+                height={144}
+                className="rounded-full object-cover border-4 border-primary shadow-lg"
+                data-ai-hint={avatar.imageHint}
+                priority
+              />
+            </Animated>
           )}
           <div className="space-y-2">
-            <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl font-headline text-primary">
+            <Animated as="h1" delay={0.2} className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl font-headline text-primary">
               Roshan Zamil Moulana
-            </h1>
-            <p className="max-w-[700px] mx-auto text-foreground/80 md:text-xl">
+            </Animated>
+            <Animated as="p" delay={0.3} className="max-w-[700px] mx-auto text-foreground/80 md:text-xl">
               Full Stack Developer – E-Commerce Specialist
-            </p>
+            </Animated>
           </div>
-          <div className="flex flex-col sm:flex-row gap-4">
+          <Animated as="div" delay={0.4} className="flex flex-col sm:flex-row gap-4">
             <Button asChild size="lg">
               <Link href="/contact">Contact Me</Link>
             </Button>
             <Button asChild variant="outline" size="lg">
               <Link href="/projects">View My Work <ArrowDown className="ml-2 h-4 w-4" /></Link>
             </Button>
-          </div>
+          </Animated>
         </div>
       </div>
     </section>

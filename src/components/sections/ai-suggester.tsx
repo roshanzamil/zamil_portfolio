@@ -6,6 +6,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Loader2, Wand2 } from 'lucide-react';
 import { suggestPortfolioProjects, SuggestPortfolioProjectsOutput } from '@/ai/flows/suggest-portfolio-projects';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
+import { Animated } from '@/components/ui/animated';
 
 const roshanSkills = ['HTML', 'CSS', 'JavaScript', 'React', 'Node.js', 'Next.js', 'TypeScript', 'MongoDB'];
 
@@ -32,7 +33,7 @@ export default function AiSuggesterSection() {
   return (
     <section id="ai-suggester" className="w-full py-16 md:py-24 lg:py-32">
       <div className="container mx-auto px-4 md:px-6 flex justify-center">
-        <Card className="w-full max-w-2xl shadow-xl">
+        <Animated as={Card} delay={0.2} className="w-full max-w-2xl shadow-xl">
           <CardHeader className="text-center">
             <Wand2 className="mx-auto h-10 w-10 text-primary mb-2" />
             <CardTitle className="text-2xl md:text-3xl font-bold font-headline">Need Project Ideas?</CardTitle>
@@ -76,7 +77,7 @@ export default function AiSuggesterSection() {
               )}
             </Button>
           </CardFooter>
-        </Card>
+        </Animated>
       </div>
     </section>
   );

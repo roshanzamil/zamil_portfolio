@@ -5,6 +5,7 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { ExternalLink } from 'lucide-react';
+import { Animated } from '@/components/ui/animated';
 
 const projects = [
   {
@@ -39,7 +40,7 @@ const projects = [
     tags: ['Odoo', 'AS400', 'Workflow Automation'],
     liveUrl: '#',
   },
-    {
+  {
     title: 'Diaflower',
     subtitle: 'E-commerce Flower Shop',
     description: 'A beautiful online store for a flower shop.',
@@ -59,49 +60,51 @@ const projects = [
 
 export default function ProjectsSection() {
   return (
-    <section id="projects" className="w-full py-16 md:py-24 lg:py-32">
+    <section id="projects" className="w-full py-16 md:py-24 lg:py-32 overflow-hidden">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="space-y-4 text-center mb-12">
+        <Animated as="div" className="space-y-4 text-center mb-12">
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl font-headline">
             My Projects
           </h2>
           <p className="max-w-[700px] mx-auto text-foreground/80 md:text-xl">
             Here are some of the key projects I've worked on.
           </p>
-        </div>
+        </Animated>
         <div className="grid gap-8 md:grid-cols-1 lg:grid-cols-2">
-          {projects.map((project) => (
-            <Card key={project.title} className="flex flex-col overflow-hidden transition-transform duration-300 hover:scale-105 hover:shadow-xl">
-              {project.image && (
-                <CardHeader className="p-0">
-                  <Image
-                    src={project.image.imageUrl}
-                    alt={project.description}
-                    width={600}
-                    height={400}
-                    className="object-cover w-full h-48"
-                    data-ai-hint={project.image.imageHint}
-                  />
-                </CardHeader>
-              )}
-              <CardContent className="flex-1 p-6 space-y-3">
-                <CardTitle className="text-xl font-bold">{project.title}</CardTitle>
-                <p className="text-sm font-medium text-muted-foreground">{project.subtitle}</p>
-                <CardDescription className="text-sm text-foreground/80">{project.description}</CardDescription>
-                <div className="flex flex-wrap gap-2 pt-2">
-                  {project.tags.map((tag) => (
-                    <Badge key={tag} variant="secondary">{tag}</Badge>
-                  ))}
-                </div>
-              </CardContent>
-              <CardFooter className="p-6 pt-0 flex justify-end gap-2">
-                <Button variant="outline" size="sm" asChild>
-                  <Link href={project.liveUrl} target="_blank">
-                    <ExternalLink className="mr-2 h-4 w-4" /> Live Site
-                  </Link>
-                </Button>
-              </CardFooter>
-            </Card>
+          {projects.map((project, index) => (
+            <Animated as="div" delay={0.1 * (index + 1)} key={project.title}>
+              <Card className="flex flex-col overflow-hidden transition-transform duration-300 hover:scale-105 hover:shadow-xl h-full">
+                {project.image && (
+                  <CardHeader className="p-0">
+                    <Image
+                      src={project.image.imageUrl}
+                      alt={project.description}
+                      width={600}
+                      height={400}
+                      className="object-cover w-full h-48"
+                      data-ai-hint={project.image.imageHint}
+                    />
+                  </CardHeader>
+                )}
+                <CardContent className="flex-1 p-6 space-y-3">
+                  <CardTitle className="text-xl font-bold">{project.title}</CardTitle>
+                  <p className="text-sm font-medium text-muted-foreground">{project.subtitle}</p>
+                  <CardDescription className="text-sm text-foreground/80">{project.description}</CardDescription>
+                  <div className="flex flex-wrap gap-2 pt-2">
+                    {project.tags.map((tag) => (
+                      <Badge key={tag} variant="secondary">{tag}</Badge>
+                    ))}
+                  </div>
+                </CardContent>
+                <CardFooter className="p-6 pt-0 flex justify-end gap-2">
+                  <Button variant="outline" size="sm" asChild>
+                    <Link href={project.liveUrl} target="_blank">
+                      <ExternalLink className="mr-2 h-4 w-4" /> Live Site
+                    </Link>
+                  </Button>
+                </CardFooter>
+              </Card>
+            </Animated>
           ))}
         </div>
       </div>
