@@ -33,7 +33,7 @@
     {
       "id": "hidayath",
       "description": "Screenshot of the Hidayath Heavy Industry website",
-      "imageUrl": "/hidhayat.webp",
+      "imageUrl": "/hidayath.webp",
       "imageHint": "website screenshot"
     },
     {
@@ -51,8 +51,32 @@
     {
       "id": "uber-evisa",
       "description": "Uber E-Visa platform",
-      "imageUrl": "https://images.unsplash.com/photo-1581553673739-c4906b5d0de8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx0cmF2ZWwlMjB2aXNhfGVufDB8fHx8MTc2NTk3NDI2Mnww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "travel visa"
+      "imageUrl": "/uberevisa.webp",
+      "imageHint": "visa application"
+    },
+    {
+      "id": "diaflower",
+      "description": "Screenshot of the Diaflower website",
+      "imageUrl": "/dia.webp",
+      "imageHint": "flower shop"
+    },
+    {
+      "id": "wms",
+      "description": "Screenshot of the Warehouse Management System",
+      "imageUrl": "/wms.webp",
+      "imageHint": "warehouse system"
+    },
+    {
+      "id": "hrms",
+      "description": "Screenshot of the Human Resource Management System",
+      "imageUrl": "/hrms.webp",
+      "imageHint": "hr system"
+    },
+    {
+      "id": "mefg",
+      "description": "Middle East Fuji Group project image",
+      "imageUrl": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjb3Jwb3JhdGUlMjBvZmZpY2V8ZW58MHx8fHwxNzY1OTc0Mjk2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "corporate office"
     }
   ]
 }
