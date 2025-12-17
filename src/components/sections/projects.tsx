@@ -14,7 +14,7 @@ const projects: Project[] = [
     description: 'Web platform for university interview practice with expert feedback and progress tracking.',
     image: PlaceHolderImages.find((img) => img.id === 'precasprep')?.imageUrl || '',
     tags: ['Problem Research', 'UI/UX Designing', 'Web Application Development'],
-    liveUrl: '#',
+    liveUrl: 'https://precasprep.com/',
     details: {
       longDescription: "PreCASPrep is a specialized web platform designed to help university applicants practice for their admissions interviews. It provides a realistic interview simulation, connects users with subject matter experts for personalized feedback, and offers robust tools for tracking progress over time. The goal is to build confidence and significantly improve interview performance.",
       keyFeatures: [
@@ -32,7 +32,7 @@ const projects: Project[] = [
     description: 'Web platform for business setup and government services in Dubai.',
     image: PlaceHolderImages.find((img) => img.id === 'ess')?.imageUrl || '',
     tags: ['UI/UX Designing', 'Website Development', 'Tracking Configuration'],
-    liveUrl: '#',
+    liveUrl: 'https://www.ess.ae/',
     details: {
       longDescription: "This platform serves as a digital one-stop-shop for entrepreneurs looking to establish their business in Dubai. It simplifies the complex process of company formation, visa applications, and other government services by providing a clear, step-by-step online workflow, document management, and real-time status updates.",
       keyFeatures: [
@@ -50,7 +50,7 @@ const projects: Project[] = [
     description: 'Reliable and government-approved attestation service platform.',
     image: PlaceHolderImages.find((img) => img.id === 'atlas')?.imageUrl || '',
     tags: ['Problem Research', 'Website Development', 'Tracking Configuration'],
-    liveUrl: '#',
+    liveUrl: 'https://atlasmofa.com/',
     details: {
       longDescription: "Atlas Document Attestation provides a seamless online portal for individuals and businesses to get their documents legally attested for use in the UAE and abroad. The platform streamlines the entire process, from document submission and payment to tracking and secure delivery, minimizing paperwork and delays.",
       keyFeatures: [
@@ -68,7 +68,7 @@ const projects: Project[] = [
     description: 'Industrial-grade digital experience for a global metal fabrication leader.',
     image: PlaceHolderImages.find((img) => img.id === 'hidayath')?.imageUrl || '',
     tags: ['Problem Research', 'Website Development', 'Tracking Configuration'],
-    liveUrl: 'https://www.industrialsolution.ae/',
+    liveUrl: 'https://hidayathheavy.com/',
     details: {
       longDescription: "A comprehensive B2B digital platform for a global leader in metal fabrication. The website showcases their extensive capabilities, project portfolio, and technical specifications, serving as a vital tool for sales, marketing, and client communication in the heavy industrial sector.",
       keyFeatures: [
@@ -86,7 +86,7 @@ const projects: Project[] = [
     description: 'Personal branding and booking platform for an astrologer and life coach.',
     image: PlaceHolderImages.find((img) => img.id === 'hellotararose')?.imageUrl || '',
     tags: ['UI/UX Designing', 'Website Development', 'Tracking Configuration'],
-    liveUrl: '#',
+    liveUrl: 'https://hellotararose.com/',
     details: {
       longDescription: "A personal branding website and client management portal for a professional astrologer and life coach. The platform effectively communicates her brand, services, and philosophy while providing an integrated booking and payment system for her clients worldwide.",
       keyFeatures: [
@@ -140,7 +140,7 @@ const projects: Project[] = [
     description: 'A beautiful online store for a flower shop.',
     image: PlaceHolderImages.find((img) => img.id === 'diaflower')?.imageUrl || '',
     tags: ['E-commerce', 'UI/UX'],
-    liveUrl: 'https://diaflower.com',
+    liveUrl: 'https://diaflower.com/',
     details: {
       longDescription: 'Diaflower is a visually-driven e-commerce platform for a boutique flower shop. The site focuses on high-quality imagery and a simple, elegant user experience to make ordering flowers online a delightful experience. It includes features for occasion-based filtering, custom bouquets, and a streamlined checkout process.',
       keyFeatures: [
@@ -158,7 +158,7 @@ const projects: Project[] = [
     description: 'A comprehensive platform for online visa application and processing, offering services for visit visas, pick & drop, cruises, and resort bookings.',
     image: PlaceHolderImages.find((img) => img.id === 'uber-evisa')?.imageUrl || '',
     tags: ['Visa Services', 'Web Application', 'Automation'],
-    liveUrl: '#',
+    liveUrl: 'https://uberevisa.com/',
     details: {
       longDescription: 'Uber E-Visa is an all-in-one portal designed to simplify the visa application process. It offers a user-friendly interface to apply for various types of visas, book associated travel services like pick & drop, and even explore leisure options such as cruises and resorts. The platform automates much of the application workflow to ensure speed and accuracy.',
       keyFeatures: [
