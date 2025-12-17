@@ -12,7 +12,7 @@ const projects = [
     title: 'PreCASPrep',
     subtitle: 'Web platform for university interview practice',
     description: 'Web platform for university interview practice with expert feedback and progress tracking.',
-    image: PlaceHolderImages.find((img) => img.id === 'project-1'),
+    image: '/precasprep.webp',
     tags: ['Problem Research', 'UI/UX Designing', 'Web Application Development'],
     liveUrl: '#',
   },
@@ -20,7 +20,7 @@ const projects = [
     title: 'Emirates Secretarial Services (ESS / KBC)',
     subtitle: 'Business setup and government services',
     description: 'Web platform for business setup and government services in Dubai.',
-    image: PlaceHolderImages.find((img) => img.id === 'project-2'),
+    image: '/ess.webp',
     tags: ['UI/UX Designing', 'Website Development', 'Tracking Configuration'],
     liveUrl: '#',
   },
@@ -28,7 +28,7 @@ const projects = [
     title: 'Atlas Document Attestation',
     subtitle: 'Government-approved attestation service',
     description: 'Reliable and government-approved attestation service platform.',
-    image: PlaceHolderImages.find((img) => img.id === 'project-3'),
+    image: '/atlas.webp',
     tags: ['Problem Research', 'Website Development', 'Tracking Configuration'],
     liveUrl: '#',
   },
@@ -36,7 +36,7 @@ const projects = [
     title: 'Hidayath Heavy Industry',
     subtitle: 'Digital experience for metal fabrication',
     description: 'Industrial-grade digital experience for a global metal fabrication leader.',
-    image: PlaceHolderImages.find((img) => img.id === 'project-1'),
+    image: '/hidayat.webp',
     tags: ['Problem Research', 'Website Development', 'Tracking Configuration'],
     liveUrl: '#',
   },
@@ -44,7 +44,7 @@ const projects = [
     title: 'Intertech International Trading',
     subtitle: 'Web solution for a premium glass supplier',
     description: 'Comprehensive web solution for a premium glass supplier.',
-    image: PlaceHolderImages.find((img) => img.id === 'project-2'),
+    image: '/intertechinternational.webp',
     tags: ['Website Development', 'Tracking Configuration'],
     liveUrl: '#',
   },
@@ -52,7 +52,7 @@ const projects = [
     title: 'Hello Tara Rose',
     subtitle: 'Personal branding and booking platform',
     description: 'Personal branding and booking platform for an astrologer and life coach.',
-    image: PlaceHolderImages.find((img) => img.id === 'project-3'),
+    image: '/hellotararose.webp',
     tags: ['UI/UX Designing', 'Website Development', 'Tracking Configuration'],
     liveUrl: '#',
   },
@@ -60,7 +60,7 @@ const projects = [
     title: 'Middle East Fuji Group',
     subtitle: 'Oracle, Odoo, SAP, Cloud Infrastructure',
     description: 'Customized and integrated internal systems to streamline cross-functional workflows across departments.',
-    image: PlaceHolderImages.find((img) => img.id === 'project-1'),
+    image: PlaceHolderImages.find((img) => img.id === 'project-1')?.imageUrl || '',
     tags: ['Oracle', 'Odoo', 'SAP', 'Cloud Infrastructure'],
     liveUrl: '#',
   },
@@ -68,7 +68,7 @@ const projects = [
     title: 'Sunniva Solar – Vendomnia Trading',
     subtitle: 'Shopware, React, PHP Frameworks',
     description: 'Led a cross-functional team to develop plugins for integrating Amazon, eBay, Kaufland, and Otto marketplaces.',
-    image: PlaceHolderImages.find((img) => img.id === 'project-2'),
+    image: PlaceHolderImages.find((img) => img.id === 'project-2')?.imageUrl || '',
     tags: ['Shopware', 'React', 'PHP', 'Amazon', 'eBay', 'Kaufland', 'Otto'],
     liveUrl: 'https://vendomnia.com',
   },
@@ -76,7 +76,7 @@ const projects = [
     title: 'E-commerce Web Store',
     subtitle: 'JSON API, Google SDK, AWS',
     description: 'An online store using PHP, JS, MySQL, and AWS hosting. Live order tracking and secure payments via NETWORK.AE.',
-    image: PlaceHolderImages.find((img) => img.id === 'project-3'),
+    image: PlaceHolderImages.find((img) => img.id === 'project-3')?.imageUrl || '',
     tags: ['PHP', 'JavaScript', 'MySQL', 'AWS', 'JSON API'],
     liveUrl: 'https://asgharfurniture.ae',
   },
@@ -84,7 +84,7 @@ const projects = [
     title: 'Warehouse Management System',
     subtitle: 'Odoo, AS400',
     description: "Streamlined Middle East Fuji's end-to-end business workflow—from data upload in Dubai to order processing in the Philippines, quotation approval, warehouse fulfillment, and final delivery via logistics.",
-    image: PlaceHolderImages.find((img) => img.id === 'project-1'), // Re-using an image
+    image: PlaceHolderImages.find((img) => img.id === 'project-1')?.imageUrl || '', 
     tags: ['Odoo', 'AS400', 'Workflow Automation'],
     liveUrl: '#',
   },
@@ -92,7 +92,7 @@ const projects = [
     title: 'Diaflower',
     subtitle: 'E-commerce Flower Shop',
     description: 'A beautiful online store for a flower shop.',
-    image: PlaceHolderImages.find((img) => img.id === 'project-2'), // Re-using an image
+    image: PlaceHolderImages.find((img) => img.id === 'project-2')?.imageUrl || '',
     tags: ['E-commerce', 'UI/UX'],
     liveUrl: 'https://diaflower.com',
   },
@@ -100,7 +100,7 @@ const projects = [
     title: 'Industrial Solution',
     subtitle: 'Industrial Supply E-commerce',
     description: 'A B2B platform for industrial solutions and supplies.',
-    image: PlaceHolderImages.find((img) => img.id === 'project-3'), // Re-using an image
+    image: PlaceHolderImages.find((img) => img.id === 'project-3')?.imageUrl || '',
     tags: ['B2B', 'E-commerce', 'Industrial'],
     liveUrl: 'https://www.industrialsolution.ae/',
   },
@@ -121,16 +121,15 @@ export default function ProjectsSection() {
         <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
           {projects.map((project, index) => (
             <Animated as="div" delay={0.1 * (index % 3)} key={`${project.title}-${index}`}>
-              <Card className="flex flex-col overflow-hidden h-full bg-card rounded-lg border-border/50 shadow-sm transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+              <Card className="group flex flex-col overflow-hidden h-full bg-card rounded-lg border border-transparent hover:border-primary/50 shadow-sm transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
                 {project.image && (
                   <div className="overflow-hidden aspect-video">
                     <Image
-                      src={project.image.imageUrl}
+                      src={project.image}
                       alt={project.description}
                       width={600}
                       height={400}
                       className="object-cover w-full h-full transition-transform duration-500 ease-in-out group-hover:scale-105"
-                      data-ai-hint={project.image.imageHint}
                     />
                   </div>
                 )}

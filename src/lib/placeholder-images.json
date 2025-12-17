@@ -13,22 +13,40 @@
       "imageHint": "desk workspace"
     },
     {
-      "id": "project-1",
-      "description": "Placeholder for project 1",
-      "imageUrl": "https://images.unsplash.com/photo-1566241477600-ac026ad43874?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx3ZWJzaXRlJTIwc2NyZWVuc2hvdHxlbnwwfHx8fDE3NjU4ODQ5MzN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "id": "precasprep",
+      "description": "Screenshot of the PreCASPrep website",
+      "imageUrl": "/precasprep.webp",
       "imageHint": "website screenshot"
     },
     {
-      "id": "project-2",
-      "description": "Placeholder for project 2",
-      "imageUrl": "https://images.unsplash.com/photo-1654764450273-59862da1a259?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxhcHAlMjBpbnRlcmZhY2V8ZW58MHx8fHwxNzY1ODg5NDA1fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "app interface"
+      "id": "ess",
+      "description": "Screenshot of the Emirates Secretarial Services website",
+      "imageUrl": "/ess.webp",
+      "imageHint": "website screenshot"
     },
     {
-      "id": "project-3",
-      "description": "Placeholder for project 3",
-      "imageUrl": "https://images.unsplash.com/photo-1686061593213-98dad7c599b9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxkYXNoYm9hcmQlMjBhbmFseXRpY3N8ZW58MHx8fHwxNzY1ODgzOTQ3fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "dashboard analytics"
+      "id": "atlas",
+      "description": "Screenshot of the Atlas Document Attestation website",
+      "imageUrl": "/atlas.webp",
+      "imageHint": "website screenshot"
+    },
+    {
+      "id": "hidayat",
+      "description": "Screenshot of the Hidayath Heavy Industry website",
+      "imageUrl": "/hidayat.webp",
+      "imageHint": "website screenshot"
+    },
+    {
+      "id": "intertech",
+      "description": "Screenshot of the Intertech International Trading website",
+      "imageUrl": "/intertechinternational.webp",
+      "imageHint": "website screenshot"
+    },
+    {
+      "id": "hellotararose",
+      "description": "Screenshot of the Hello Tara Rose website",
+      "imageUrl": "/hellotararose.webp",
+      "imageHint": "website screenshot"
     }
   ]
 }
