@@ -72,6 +72,14 @@ const projects = [
     tags: ['E-commerce', 'UI/UX'],
     liveUrl: 'https://diaflower.com',
   },
+  {
+    title: 'Uber E-Visa',
+    subtitle: 'Visa Service Platform',
+    description: 'A comprehensive platform for online visa application and processing, offering services for visit visas, pick & drop, cruises, and resort bookings.',
+    image: PlaceHolderImages.find((img) => img.id === 'uber-evisa')?.imageUrl || '',
+    tags: ['Visa Services', 'Web Application', 'Automation'],
+    liveUrl: '#',
+  },
 ];
 
 export default function ProjectsSection() {
