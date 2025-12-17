@@ -2,7 +2,7 @@
 
 import * as z from 'zod';
 import { Resend } from 'resend';
-import ContactFormEmail from '@/components/emails/contact-form-email';
+import React from 'react';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 const toEmail = process.env.TO_EMAIL as string;
@@ -17,18 +17,20 @@ const formSchema = z.object({
 export async function sendEmail(formData: z.infer<typeof formSchema>) {
   try {
     const { name, email, lookingFor } = formSchema.parse(formData);
-    const reactEmail = await import('react-email');
+    
+    // Dynamically import the email component
+    const { default: ContactFormEmail } = await import('@/components/emails/contact-form-email');
 
     const { data, error } = await resend.emails.send({
       from: `Contact Form <${fromEmail}>`,
       to: [toEmail],
       subject: `New Message from ${name} via your Portfolio`,
       reply_to: email,
-      react: ContactFormEmail({
+      react: React.createElement(ContactFormEmail, {
         name,
         email,
         lookingFor,
-      }) as React.ReactElement,
+      }),
     });
 
     if (error) {
