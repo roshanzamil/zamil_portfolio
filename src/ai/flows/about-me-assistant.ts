@@ -12,29 +12,63 @@ import {ai} from '@/ai/genkit';
 import {z} from 'genkit';
 
 const aboutMeContext = `
-  Roshan Zamil Moulana is an accomplished Full Stack Developer and E-Commerce Specialist.
+  Roshan Zamil Moulana
+  Full Stack Developer – E-Commerce Specialist
+  Location: Al – Karama, Dubai | Tel: +971 588 254 527
+  Email: rshn.zamil@gmail.com | LinkedIn: linkedin.com/in/roshan-zamil/
 
-  Summary:
-  He has successfully developed a million-euro web application that increased revenue by 35%, improved customer engagement by 50%, and optimized conversion rates by 30% using sales funnel techniques. He is skilled in PHP, NodeJS, Symfony, Laravel, Java, Python, AngularJS, ReactJS, and cloud infrastructure, with expertise in API integrations, DevOps, CI/CD pipelines, and database performance optimization. He has a proven ability to lead cross-functional teams of 5, streamline development processes, and deliver scalable, high-performing applications.
+  QUALIFICATION SUMMARY
+  Accomplished Full Stack Developer and E-Commerce Specialist. Successfully developed a million-euro web application that increased revenue by 35%, improved customer engagement by 50%, and optimized conversion rates by 30% using sales funnel techniques. Skilled in PHP, NodeJS, Symfony, Laravel, Java, Python, AngularJS, ReactJS, and cloud infrastructure, with expertise in API integrations, DevOps, CI/CD pipelines, and database performance optimization. Proven ability to lead cross functional team of 5, streamline development processes, and deliver scalable, high performing applications.
 
-  Experience:
-  - Full Stack Developer at Sunniva Solar GMBH (Sep 2024 – May 2025): Architected, developed, and maintained responsive, high-performance web applications and e-commerce platforms. Managed and customized Shopify, WooCommerce, and Magento. Deployed, monitored, and scaled applications on AWS and Google Cloud. Designed and implemented RESTful and GraphQL APIs. Led a team of 10 junior developers, enhancing team productivity by 25%.
-  - Full Stack Developer at Middle East Fuji Group LLC (Jun 2022 - Sep 2024): Designed, developed, and maintained static and e-commerce websites. Managed Shopify and WooCommerce platforms. Deployed and managed applications on AWS and Google Cloud servers. Provided training and mentorship to junior web developers.
-  - Web Developer at BroCrypt (Jan 2018 – Mar 2022): Utilized HTML, CSS, and JavaScript to create 100+ responsive landing pages for clients. Maintained graphic standards and branding. Implemented SEO strategies, increasing acquisition by an average of 200% each month.
-  - Full Stack Developer at Saninro Tech (Jan 2018 - Jan 2020): Worked with QA to test new pages and products. Rewrote HTML to meet industry standards for SEO and Accessibility. Built user interfaces for hotel systems and developed 3 WordPress sites.
+  KEY SKILLS
+  - HTML5, CSS3
+  - Cloud Infrastructure
+  - RESTful APIs/WebSockets
+  - PHP/JavaScript
+  - Shopify/WooCommerce
+  - Payment Gateways
+  - Digital Marketing /SEO
+  - Figma, Adobe XD
+  - Git, GitHub
 
-  Skills:
-  - Languages & Frameworks: HTML5, CSS3, JavaScript, PHP, Java, Python, ReactJS, AngularJS, NodeJS, Symfony, Laravel.
-  - Platforms & Infrastructure: Cloud Infrastructure, Shopify, WooCommerce, RESTful APIs, WebSockets, Payment Gateways.
-  - Tools & Expertise: Digital Marketing / SEO, Figma, Adobe XD, Git & GitHub, Database Management, DevOps/CI-CD.
+  RELEVANT PROFESSIONAL EXPERIENCE
 
-  Projects:
-  - Middle East Fuji Group: Customized and integrated internal systems (Oracle, Odoo, SAP) to streamline cross-functional workflows.
-  - Sunniva Solar – Vendomnia Trading: Led a team to develop plugins for integrating Amazon, eBay, Kaufland, and Otto marketplaces using Shopware and React.
-  - E-commerce Web Store (asgharfurniture.ae): Built an online store using PHP, JS, MySQL, and AWS, with live order tracking and secure payments.
-  - Warehouse Management System: Streamlined Middle East Fuji's end-to-end business workflow from data upload to final delivery.
-  - Diaflower (diaflower.com): An e-commerce flower shop.
-  - Industrial Solution (industrialsolution.ae): A B2B platform for industrial supplies.
+  Full Stack Developer (Sep 2024 – May 2025)
+  Sunniva Solar GMBH - Business Bay, Dubai
+  - Web Application Development: Architect, develop, and maintain responsive, high-performance web applications and e-commerce platforms.
+  - E-commerce Platforms: Manage and customize Shopify, WooCommerce, and Magento, implementing optimized online shopping carts, payment gateways, and product catalogs.
+  - Server & Cloud Management: Deploy, monitor, and scale applications on AWS and Google Cloud, ensuring security and performance optimization.
+  - API Development & Integration: Design and implement RESTful and GraphQL APIs, integrating third-party services for enhanced functionality.
+  - Version Control: Utilized Git and GitHub for managing code changes and collaborating across departments.
+  - Database Management: Administer MySQL, PostgreSQL, and MongoDB, optimizing queries and enhancing performance.
+  - Team Leadership & Mentorship: Guide and mentor junior developers, conduct code reviews, and enforce best development practices to drive continuous improvement. Led a team of 10 junior developers, enhancing team productivity by 25%. Integrated secure payment gateways, improving transaction success rates by 30%.
+
+  Full Stack Developer (Jun 2022 - Sep 2024)
+  Middle East Fuji Group LLC - Al Quoz, Dubai
+  - Web Development: Design, develop, and maintain static and e-commerce websites for a group of companies. Implement responsive and user-friendly interfaces to enhance the user experience. Collaborate with UI/UX designers to translate design wireframes into functional web applications.
+  - E-commerce Platforms: Managed and customized e-commerce platforms such as Shopify, and WooCommerce, ensuring optimal performance. Implemented and optimized online shopping carts, payment gateways, and product catalogs.
+  - Server Management: Deploy, manage, and monitor AWS and Google Cloud applications. Ensure server security, scalability, and performance.
+  - Training and Mentorship: Provide training and mentorship to web developers, fostering skill development and knowledge transfer. Conduct code reviews to maintain coding standards and best practices.
+  - API Integration: Integrate 3rd party APIs to enhance website functionality and connectivity. Troubleshoot and debug API-related issues.
+  - Database Management: Utilized SQL and MySQL for efficient database management. Optimized database queries and performance.
+
+  Web Developer (Jan 2018 – Mar 2022)
+  BroCrypt - Sri Lanka
+  - Utilized HTML, CSS, and JavaScript to create 100+ responsive landing pages for clients.
+  - Used workspaces to promote efficient asynchronous and synchronous work for increased efficiency.
+  - Maintained graphic standards and branding throughout the product’s interfaces.
+  - Implemented SEO strategies for acquisition up by an average of 200% each month.
+
+  Full Stack Developer (Jan 2018 - Jan 2020)
+  Saninro Tech - Sri Lanka
+  - Worked with Quality Assurance to get new pages/products tested, and addressed any issues within 48 hours.
+  - Rewrote HTML to meet industry and company standards for SEO and Accessibility.
+  - Building beautiful user interface for hotel system without compromising functionality for aesthetics.
+  - Developed 3 WordPress sites with testing, deployment, and updates.
+
+  EDUCATION
+  - Computer Science, Bachelor of Science (2023) - Girne American University, Cyprus
+  - Rapid Web Application Development (2018) - Institute of Java and Software Engineering, Sri Lanka
 `;
 
 const AskMyAssistantInputSchema = z.object({
