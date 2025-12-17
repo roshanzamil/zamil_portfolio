@@ -11,6 +11,8 @@ import * as z from 'zod';
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
 import { useToast } from '@/hooks/use-toast';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { sendEmail } from '@/app/actions/send-email';
+import { Textarea } from '../ui/textarea';
 
 const contactInfo = [
     {
@@ -49,13 +51,22 @@ export default function ContactSection() {
     },
   });
  
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
-    toast({
-      title: "Message Sent!",
-      description: `Thanks for reaching out, ${values.name}. I'll get back to you soon.`,
-    });
-    form.reset();
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    const result = await sendEmail(values);
+
+    if (result.success) {
+      toast({
+        title: "Message Sent!",
+        description: `Thanks for reaching out, ${values.name}. I'll get back to you soon.`,
+      });
+      form.reset();
+    } else {
+      toast({
+        variant: "destructive",
+        title: "Uh oh! Something went wrong.",
+        description: "There was a problem sending your message. Please try again.",
+      });
+    }
   }
 
   return (
@@ -129,10 +140,10 @@ export default function ContactSection() {
                                               <SelectValue placeholder="Select Dropdown" />
                                           </SelectTrigger>
                                           <SelectContent>
-                                              <SelectItem value="full-time-role">a full-time role</SelectItem>
-                                              <SelectItem value="freelance-project">a freelance project</SelectItem>
-                                              <SelectItem value="collaboration">a collaboration</SelectItem>
-                                              <SelectItem value="just-to-say-hi">just to say hi</SelectItem>
+                                              <SelectItem value="a full-time role">a full-time role</SelectItem>
+                                              <SelectItem value="a freelance project">a freelance project</SelectItem>
+                                              <SelectItem value="a collaboration">a collaboration</SelectItem>
+                                              <SelectItem value="just to say hi">just to say hi</SelectItem>
                                           </SelectContent>
                                       </Select>
                                   </FormControl>
