@@ -47,18 +47,18 @@ export default function ExperienceSection() {
         </Animated>
         <div className="relative">
           {/* Vertical line */}
-          <div className="absolute left-1/2 -ml-px w-0.5 h-full bg-border" aria-hidden="true"></div>
+          <div className="absolute left-5 md:left-1/2 -ml-px w-0.5 h-full bg-border" aria-hidden="true"></div>
 
           <div className="space-y-12">
             {experiences.map((experience, index) => (
-              <Animated key={experience.company} delay={0.2 * (index + 1)} className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+              <Animated key={experience.company} delay={0.2 * (index + 1)} className="relative flex items-start md:items-center md:justify-normal md:odd:flex-row-reverse group">
                 {/* Icon in the middle */}
-                <div className="flex items-center justify-center w-10 h-10 rounded-full border-2 border-primary bg-background text-primary absolute left-1/2 -translate-x-1/2 md:group-odd:-translate-x-0 md:group-even:-translate-x-0 z-10">
+                <div className="flex items-center justify-center w-10 h-10 rounded-full border-2 border-primary bg-background text-primary absolute left-0 md:left-1/2 -translate-x-1/2 z-10">
                   <Briefcase className="w-5 h-5" />
                 </div>
                 
                 {/* Content */}
-                <div className="w-[calc(50%-2.5rem)] md:w-[calc(50%-2.5rem)] space-y-3">
+                <div className="w-full pl-16 md:pl-0 md:w-[calc(50%-2.5rem)] space-y-3">
                   <div className="bg-muted/50 p-6 rounded-lg shadow-md border border-border/50">
                     <h3 className="text-xl font-bold text-primary">{experience.role}</h3>
                     <p className="font-semibold">{experience.company}</p>
