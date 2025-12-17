@@ -1,4 +1,4 @@
 import { config } from 'dotenv';
 config();
 
-import '@/ai/flows/suggest-portfolio-projects.ts';
+import '@/ai/flows/about-me-assistant.ts';
