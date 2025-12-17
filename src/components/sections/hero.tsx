@@ -26,18 +26,18 @@ export default function HeroSection() {
             </Animated>
           )}
           <div className="space-y-2">
-            <Animated as="h1" delay={0.3} className="text-4xl font-bold sm:text-5xl md:text-6xl lg:text-7xl font-headline text-primary">
+            <Animated as="h1" delay={0.3} className="text-5xl font-bold sm:text-6xl md:text-7xl lg:text-8xl font-headline text-primary">
               Roshan Zamil Moulana
             </Animated>
-            <Animated as="p" delay={0.4} className="max-w-[700px] mx-auto text-foreground/80 md:text-xl">
+            <Animated as="p" delay={0.4} className="max-w-[700px] mx-auto text-foreground/80 text-xl md:text-2xl">
               Full Stack Developer – E-Commerce Specialist
             </Animated>
           </div>
           <Animated as="div" delay={0.5} className="flex flex-col sm:flex-row gap-4">
-            <Button asChild size="lg">
+            <Button asChild size="lg" className="text-lg">
               <Link href="/contact">Contact Me</Link>
             </Button>
-            <Button asChild variant="outline" size="lg">
+            <Button asChild variant="outline" size="lg" className="text-lg">
               <Link href="/projects">View My Work <ArrowDown className="ml-2 h-4 w-4" /></Link>
             </Button>
           </Animated>

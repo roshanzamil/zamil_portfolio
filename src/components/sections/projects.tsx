@@ -63,10 +63,10 @@ export default function ProjectsSection() {
     <section id="projects" className="w-full py-16 md:py-24 lg:py-32 overflow-hidden">
       <div className="container mx-auto px-4 md:px-6">
         <Animated as="div" className="space-y-4 text-center mb-12">
-          <h2 className="text-3xl font-bold sm:text-4xl md:text-5xl font-headline">
+          <h2 className="text-4xl font-bold sm:text-5xl md:text-6xl font-headline">
             My Projects
           </h2>
-          <p className="max-w-[700px] mx-auto text-foreground/80 md:text-xl">
+          <p className="max-w-[700px] mx-auto text-foreground/80 text-xl md:text-2xl">
             Here are some of the key projects I've worked on.
           </p>
         </Animated>
@@ -87,17 +87,17 @@ export default function ProjectsSection() {
                   </CardHeader>
                 )}
                 <CardContent className="flex-1 p-6 space-y-3">
-                  <CardTitle className="text-xl font-bold">{project.title}</CardTitle>
-                  <p className="text-sm font-medium text-muted-foreground">{project.subtitle}</p>
-                  <CardDescription className="text-sm text-foreground/80">{project.description}</CardDescription>
+                  <CardTitle className="text-2xl font-bold">{project.title}</CardTitle>
+                  <p className="text-lg font-medium text-muted-foreground">{project.subtitle}</p>
+                  <CardDescription className="text-lg text-foreground/80">{project.description}</CardDescription>
                   <div className="flex flex-wrap gap-2 pt-2">
                     {project.tags.map((tag) => (
-                      <Badge key={tag} variant="secondary">{tag}</Badge>
+                      <Badge key={tag} variant="secondary" className="text-base">{tag}</Badge>
                     ))}
                   </div>
                 </CardContent>
                 <CardFooter className="p-6 pt-0 flex justify-end gap-2">
-                  <Button variant="outline" size="sm" asChild>
+                  <Button variant="outline" size="sm" asChild className="text-base">
                     <Link href={project.liveUrl} target="_blank">
                       <ExternalLink className="mr-2 h-4 w-4" /> Live Site
                     </Link>

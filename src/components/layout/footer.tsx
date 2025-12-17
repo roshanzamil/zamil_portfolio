@@ -8,7 +8,7 @@ export default function Footer() {
   return (
     <footer className="bg-muted/50 border-t">
       <div className="container mx-auto flex flex-col items-center justify-between gap-4 px-4 py-8 sm:flex-row md:px-6">
-        <p className="text-sm text-muted-foreground">
+        <p className="text-base text-muted-foreground">
           &copy; {year} Roshan Zamil Moulana. All rights reserved.
         </p>
         <div className="flex items-center gap-2">

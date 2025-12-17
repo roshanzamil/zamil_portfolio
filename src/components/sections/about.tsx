@@ -11,10 +11,10 @@ export default function AboutSection() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid gap-10 lg:grid-cols-2 lg:gap-16 items-center">
           <Animated as="div" className="space-y-4">
-            <h2 className="text-3xl font-bold sm:text-4xl md:text-5xl font-headline">
+            <h2 className="text-4xl font-bold sm:text-5xl md:text-6xl font-headline">
               About Me
             </h2>
-            <div className="text-foreground/80 space-y-4 text-base md:text-lg">
+            <div className="text-foreground/80 space-y-4 text-xl md:text-2xl">
               <p>
                 I am an accomplished Full Stack Developer and E-Commerce Specialist. I have successfully developed a million-euro web application that increased revenue by 35%, improved customer engagement by 50%, and optimized conversion rates by 30% using sales funnel techniques. 
               </p>

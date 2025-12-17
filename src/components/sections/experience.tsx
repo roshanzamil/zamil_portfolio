@@ -38,10 +38,10 @@ export default function ExperienceSection() {
     <section id="experience" className="w-full py-16 md:py-24 lg:py-32 overflow-hidden">
       <div className="container mx-auto px-4 md:px-6">
         <Animated as="div" className="space-y-4 text-center mb-12">
-          <h2 className="text-3xl font-bold sm:text-4xl md:text-5xl font-headline">
+          <h2 className="text-4xl font-bold sm:text-5xl md:text-6xl font-headline">
             My Experience
           </h2>
-          <p className="max-w-[700px] mx-auto text-foreground/80 md:text-xl">
+          <p className="max-w-[700px] mx-auto text-foreground/80 text-xl md:text-2xl">
             A timeline of my professional roles and accomplishments.
           </p>
         </Animated>
@@ -60,13 +60,13 @@ export default function ExperienceSection() {
                 {/* Content */}
                 <div className="w-full pl-16 md:pl-0 md:w-[calc(50%-2.5rem)] space-y-3">
                   <div className="bg-muted/50 p-6 rounded-lg shadow-md border border-border/50">
-                    <h3 className="text-xl font-bold text-primary">{experience.role}</h3>
-                    <p className="font-semibold">{experience.company}</p>
-                    <p className="text-sm text-muted-foreground mb-3">{experience.period}</p>
-                    <p className="text-sm text-foreground/80 mb-4">{experience.description}</p>
+                    <h3 className="text-2xl font-bold text-primary">{experience.role}</h3>
+                    <p className="font-semibold text-xl">{experience.company}</p>
+                    <p className="text-base text-muted-foreground mb-3">{experience.period}</p>
+                    <p className="text-lg text-foreground/80 mb-4">{experience.description}</p>
                     <div className="flex flex-wrap gap-2">
                       {experience.tags.map((tag) => (
-                        <Badge key={tag} variant="secondary">{tag}</Badge>
+                        <Badge key={tag} variant="secondary" className="text-base">{tag}</Badge>
                       ))}
                     </div>
                   </div>
