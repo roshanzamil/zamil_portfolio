@@ -7,6 +7,8 @@ import Footer from '@/components/layout/footer';
 import { GsapProvider } from '@/components/providers/gsap-provider';
 import { Suspense } from 'react';
 import Loading from './loading';
+import { ThemeProvider } from '@/components/providers/theme-provider';
+import { ThemeToggleButton } from '@/components/ui/theme-toggle-button';
 
 export const metadata: Metadata = {
   title: 'Roshan Zamil Moulana | Full Stack Developer',
@@ -26,18 +28,26 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
       </head>
       <body className={cn("antialiased", "bg-background")}>
-        <GsapProvider>
-          <div className="flex flex-col min-h-svh">
-            <Header />
-            <main className="flex-1">
-              <Suspense fallback={<Loading />}>
-                {children}
-              </Suspense>
-            </main>
-            <Footer />
-          </div>
-          <Toaster />
-        </GsapProvider>
+        <ThemeProvider
+            attribute="class"
+            defaultTheme="dark"
+            enableSystem
+            disableTransitionOnChange
+        >
+          <GsapProvider>
+            <div className="flex flex-col min-h-svh">
+              <Header />
+              <main className="flex-1">
+                <Suspense fallback={<Loading />}>
+                  {children}
+                </Suspense>
+              </main>
+              <Footer />
+            </div>
+            <ThemeToggleButton />
+            <Toaster />
+          </GsapProvider>
+        </ThemeProvider>
       </body>
     </html>
   );
