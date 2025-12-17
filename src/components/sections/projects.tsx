@@ -4,49 +4,57 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle, CardDescription }
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { ExternalLink, Github } from 'lucide-react';
+import { ExternalLink } from 'lucide-react';
 
 const projects = [
   {
-    company: 'Sunniva Solar GMBH',
-    role: 'Full Stack Developer',
-    period: 'Sep 2024 – May 2025',
-    description: 'Architect, develop, and maintain responsive, high-performance web applications and e-commerce platforms. Manage and customize Shopify, WooCommerce, and Magento. Deploy, monitor, and scale applications on AWS and Google Cloud. Design and implement RESTful and GraphQL APIs. Led a team of 10 junior developers, enhancing team productivity by 25%.',
+    title: 'Middle East Fuji Group',
+    subtitle: 'Oracle, Odoo, SAP, Cloud Infrastructure',
+    description: 'Customized and integrated internal systems to streamline cross-functional workflows across departments.',
     image: PlaceHolderImages.find((img) => img.id === 'project-1'),
-    tags: ['PHP', 'NodeJS', 'Symfony', 'Laravel', 'Java', 'Python', 'AngularJS', 'ReactJS', 'AWS', 'GCP', 'Shopify', 'WooCommerce'],
+    tags: ['Oracle', 'Odoo', 'SAP', 'Cloud Infrastructure'],
     liveUrl: '#',
-    githubUrl: '#',
   },
   {
-    company: 'Middle East Fuji Group LLC',
-    role: 'Full Stack Developer',
-    period: 'Jun 2022 - Sep 2024',
-    description: 'Designed, developed, and maintained static and e-commerce websites. Managed Shopify and WooCommerce platforms. Deployed and managed applications on AWS and Google Cloud servers. Provided training and mentorship to junior web developers.',
+    title: 'Sunniva Solar – Vendomnia Trading',
+    subtitle: 'Shopware, React, PHP Frameworks',
+    description: 'Led a cross-functional team to develop plugins for integrating Amazon, eBay, Kaufland, and Otto marketplaces.',
     image: PlaceHolderImages.find((img) => img.id === 'project-2'),
-    tags: ['Shopify', 'WooCommerce', 'AWS', 'Google Cloud', 'CodeIgniter', 'MySQL', 'API Integration'],
-    liveUrl: '#',
-    githubUrl: '#',
+    tags: ['Shopware', 'React', 'PHP', 'Amazon', 'eBay', 'Kaufland', 'Otto'],
+    liveUrl: 'https://vendomnia.com',
   },
   {
-    company: 'BroCrypt',
-    role: 'Web Developer',
-    period: 'Jan 2018 – Mar 2022',
-    description: 'Utilized HTML, CSS, and JavaScript to create 100+ responsive landing pages for clients. Maintained graphic standards and branding. Implemented SEO strategies, increasing acquisition by an average of 200% each month.',
+    title: 'E-commerce Web Store',
+    subtitle: 'JSON API, Google SDK, AWS',
+    description: 'An online store using PHP, JS, MySQL, and AWS hosting. Live order tracking and secure payments via NETWORK.AE.',
     image: PlaceHolderImages.find((img) => img.id === 'project-3'),
-    tags: ['HTML', 'CSS', 'JavaScript', 'SEO'],
-    liveUrl: '#',
-    githubUrl: '#',
+    tags: ['PHP', 'JavaScript', 'MySQL', 'AWS', 'JSON API'],
+    liveUrl: 'https://asgharfurniture.ae',
   },
   {
-    company: 'Saninro Tech',
-    role: 'Full Stack Developer',
-    period: 'Jan 2018 - Jan 2020',
-    description: 'Worked with QA to test new pages and products. Rewrote HTML to meet industry standards for SEO and Accessibility. Built user interfaces for hotel systems and developed 3 WordPress sites.',
+    title: 'Warehouse Management System',
+    subtitle: 'Odoo, AS400',
+    description: "Streamlined Middle East Fuji's end-to-end business workflow—from data upload in Dubai to order processing in the Philippines, quotation approval, warehouse fulfillment, and final delivery via logistics.",
     image: PlaceHolderImages.find((img) => img.id === 'project-1'), // Re-using an image
-    tags: ['HTML', 'SEO', 'Accessibility', 'WordPress', 'UI/UX'],
+    tags: ['Odoo', 'AS400', 'Workflow Automation'],
     liveUrl: '#',
-    githubUrl: '#',
   },
+    {
+    title: 'Diaflower',
+    subtitle: 'E-commerce Flower Shop',
+    description: 'A beautiful online store for a flower shop.',
+    image: PlaceHolderImages.find((img) => img.id === 'project-2'), // Re-using an image
+    tags: ['E-commerce', 'UI/UX'],
+    liveUrl: 'https://diaflower.com',
+  },
+  {
+    title: 'Industrial Solution',
+    subtitle: 'Industrial Supply E-commerce',
+    description: 'A B2B platform for industrial solutions and supplies.',
+    image: PlaceHolderImages.find((img) => img.id === 'project-3'), // Re-using an image
+    tags: ['B2B', 'E-commerce', 'Industrial'],
+    liveUrl: 'https://industrialsolution.ae',
+  }
 ];
 
 export default function ProjectsSection() {
@@ -55,15 +63,15 @@ export default function ProjectsSection() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="space-y-4 text-center mb-12">
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl font-headline">
-            My Experience
+            My Projects
           </h2>
           <p className="max-w-[700px] mx-auto text-foreground/80 md:text-xl">
-            A selection of my professional roles and accomplishments.
+            Here are some of the key projects I've worked on.
           </p>
         </div>
         <div className="grid gap-8 md:grid-cols-1 lg:grid-cols-2">
           {projects.map((project) => (
-            <Card key={project.company} className="flex flex-col overflow-hidden transition-transform duration-300 hover:scale-105 hover:shadow-xl">
+            <Card key={project.title} className="flex flex-col overflow-hidden transition-transform duration-300 hover:scale-105 hover:shadow-xl">
               {project.image && (
                 <CardHeader className="p-0">
                   <Image
@@ -77,8 +85,8 @@ export default function ProjectsSection() {
                 </CardHeader>
               )}
               <CardContent className="flex-1 p-6 space-y-3">
-                <CardTitle className="text-xl font-bold">{project.role} at {project.company}</CardTitle>
-                <p className="text-sm font-medium text-muted-foreground">{project.period}</p>
+                <CardTitle className="text-xl font-bold">{project.title}</CardTitle>
+                <p className="text-sm font-medium text-muted-foreground">{project.subtitle}</p>
                 <CardDescription className="text-sm text-foreground/80">{project.description}</CardDescription>
                 <div className="flex flex-wrap gap-2 pt-2">
                   {project.tags.map((tag) => (
@@ -89,12 +97,7 @@ export default function ProjectsSection() {
               <CardFooter className="p-6 pt-0 flex justify-end gap-2">
                 <Button variant="outline" size="sm" asChild>
                   <Link href={project.liveUrl} target="_blank">
-                    <ExternalLink className="mr-2 h-4 w-4" /> Company Site
-                  </Link>
-                </Button>
-                <Button variant="outline" size="sm" asChild>
-                  <Link href={project.githubUrl} target="_blank">
-                    <Github className="mr-2 h-4 w-4" /> Source
+                    <ExternalLink className="mr-2 h-4 w-4" /> Live Site
                   </Link>
                 </Button>
               </CardFooter>
