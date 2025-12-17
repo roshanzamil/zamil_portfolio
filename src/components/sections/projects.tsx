@@ -65,22 +65,6 @@ const projects = [
     liveUrl: '#',
   },
   {
-    title: 'Sunniva Solar – Vendomnia Trading',
-    subtitle: 'Shopware, React, PHP Frameworks',
-    description: 'Led a cross-functional team to develop plugins for integrating Amazon, eBay, Kaufland, and Otto marketplaces.',
-    image: PlaceHolderImages.find((img) => img.id === 'project-2')?.imageUrl || '',
-    tags: ['Shopware', 'React', 'PHP', 'Amazon', 'eBay', 'Kaufland', 'Otto'],
-    liveUrl: 'https://vendomnia.com',
-  },
-  {
-    title: 'E-commerce Web Store',
-    subtitle: 'JSON API, Google SDK, AWS',
-    description: 'An online store using PHP, JS, MySQL, and AWS hosting. Live order tracking and secure payments via NETWORK.AE.',
-    image: PlaceHolderImages.find((img) => img.id === 'project-3')?.imageUrl || '',
-    tags: ['PHP', 'JavaScript', 'MySQL', 'AWS', 'JSON API'],
-    liveUrl: 'https://asgharfurniture.ae',
-  },
-  {
     title: 'Warehouse Management System',
     subtitle: 'Odoo, AS400',
     description: "Streamlined Middle East Fuji's end-to-end business workflow—from data upload in Dubai to order processing in the Philippines, quotation approval, warehouse fulfillment, and final delivery via logistics.",
@@ -95,14 +79,6 @@ const projects = [
     image: PlaceHolderImages.find((img) => img.id === 'project-2')?.imageUrl || '',
     tags: ['E-commerce', 'UI/UX'],
     liveUrl: 'https://diaflower.com',
-  },
-  {
-    title: 'Industrial Solution',
-    subtitle: 'Industrial Supply E-commerce',
-    description: 'A B2B platform for industrial solutions and supplies.',
-    image: PlaceHolderImages.find((img) => img.id === 'project-3')?.imageUrl || '',
-    tags: ['B2B', 'E-commerce', 'Industrial'],
-    liveUrl: 'https://www.industrialsolution.ae/',
   },
 ];
 
