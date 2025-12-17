@@ -17,8 +17,8 @@ export default function HeroSection() {
               <Image
                 src={avatar.imageUrl}
                 alt={avatar.description}
-                width={144}
-                height={144}
+                width={256}
+                height={256}
                 className="rounded-full object-cover border-4 border-primary shadow-lg"
                 data-ai-hint={avatar.imageHint}
                 priority
