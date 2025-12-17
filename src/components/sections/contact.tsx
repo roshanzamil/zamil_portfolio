@@ -100,24 +100,24 @@ export default function ContactSection() {
                       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
                         <div className="text-xl md:text-2xl space-y-6">
                           
-                          <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
+                          <div className="flex flex-wrap items-center gap-x-2 gap-y-2">
                              <FormField
                               control={form.control}
                               name="name"
                               render={({ field }) => (
-                                <FormItem className='flex items-center gap-2'>
-                                  <FormLabel className='font-normal'>Hey, my name is</FormLabel>
+                                <FormItem className='flex items-baseline gap-2'>
+                                  <FormLabel className='font-normal shrink-0'>Hey, my name is</FormLabel>
                                   <FormControl>
-                                    <Input placeholder="Type Here" {...field} className="inline-block w-auto min-w-[150px] bg-transparent border-0 border-b rounded-none text-xl md:text-2xl px-1 focus-visible:ring-0 focus-visible:ring-offset-0"/>
+                                    <Input placeholder="Type Here" {...field} className="inline-block w-auto min-w-[150px] bg-transparent border-0 border-b-2 border-input rounded-none text-xl md:text-2xl px-1 h-auto focus-visible:ring-0 focus-visible:ring-offset-0"/>
                                   </FormControl>
                                 </FormItem>
                               )}
                             />
-                            <FormLabel className='font-normal'>and I'm looking for</FormLabel>
-                             <FormMessage className='w-full' />
+                            <FormLabel className='font-normal shrink-0'>and I'm looking for</FormLabel>
+                             <FormMessage className='w-full !mt-2' />
                           </div>
 
-                           <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
+                           <div className="flex flex-wrap items-center gap-x-2 gap-y-2">
                              <FormField
                               control={form.control}
                               name="lookingFor"
@@ -125,7 +125,7 @@ export default function ContactSection() {
                                  <FormItem>
                                   <FormControl>
                                       <Select onValueChange={field.onChange} defaultValue={field.value}>
-                                          <SelectTrigger className="inline-block w-auto min-w-[200px] bg-transparent border-0 border-b rounded-none text-xl md:text-2xl px-1 h-auto py-1 focus:ring-0 focus:ring-offset-0 text-muted-foreground data-[placeholder]:text-muted-foreground">
+                                          <SelectTrigger className="inline-block w-auto min-w-[200px] bg-transparent border-0 border-b-2 border-input rounded-none text-xl md:text-2xl px-1 h-auto py-1 focus:ring-0 focus:ring-offset-0 text-muted-foreground data-[placeholder]:text-muted-foreground">
                                               <SelectValue placeholder="Select Dropdown" />
                                           </SelectTrigger>
                                           <SelectContent>
@@ -139,24 +139,24 @@ export default function ContactSection() {
                                  </FormItem>
                               )}
                               />
-                             <FormMessage className='w-full' />
+                             <FormMessage className='w-full !mt-2' />
                            </div>
 
-                          <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
+                          <div className="flex flex-wrap items-baseline gap-x-2 gap-y-2">
                             <FormField
                               control={form.control}
                               name="email"
                               render={({ field }) => (
-                                <FormItem className='flex items-center gap-2'>
-                                  <FormLabel className='font-normal'>Get in touch with me at</FormLabel>
+                                <FormItem className='flex items-baseline gap-2'>
+                                  <FormLabel className='font-normal shrink-0'>Get in touch with me at</FormLabel>
                                   <FormControl>
-                                    <Input placeholder="Your Email ID Here" {...field} className="inline-block w-auto min-w-[200px] bg-transparent border-0 border-b rounded-none text-xl md:text-2xl px-1 focus-visible:ring-0 focus-visible:ring-offset-0"/>
+                                    <Input placeholder="Your Email ID Here" {...field} className="inline-block w-auto min-w-[200px] bg-transparent border-0 border-b-2 border-input rounded-none text-xl md:text-2xl px-1 h-auto focus-visible:ring-0 focus-visible:ring-offset-0"/>
                                   </FormControl>
-                                  <FormLabel className='font-normal'>!</FormLabel>
                                 </FormItem>
                               )}
                             />
-                            <FormMessage className='w-full' />
+                             <FormLabel className='font-normal shrink-0'>!</FormLabel>
+                            <FormMessage className='w-full !mt-2' />
                           </div>
                         </div>
                         
