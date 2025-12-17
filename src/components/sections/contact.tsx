@@ -103,10 +103,7 @@ export default function ContactSection() {
             </Animated>
 
             <Animated as={Card} delay={0.4} className="lg:col-span-3 shadow-lg rounded-lg border">
-                <CardHeader>
-                    <CardTitle className="text-2xl">Send me a message</CardTitle>
-                </CardHeader>
-                <CardContent>
+                <CardContent className="pt-6">
                     <Form {...form}>
                       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
                         <div className="text-xl md:text-2xl space-y-6">
