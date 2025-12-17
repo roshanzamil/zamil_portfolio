@@ -35,22 +35,26 @@ const aboutMeContext = `
 
   Full Stack Developer (Sep 2024 – May 2025)
   Sunniva Solar GMBH - Business Bay, Dubai
+  Results-driven Full Stack Developer with extensive experience in developing, deploying, and maintaining secure and scalable web applications. Proven ability to provide technical leadership, architect robust system designs, and optimize database performance. Adept at collaborating with cross-functional teams to translate business requirements into functional solutions, ensuring high-quality standards thorough testing and debugging.
   - Web Application Development: Architect, develop, and maintain responsive, high-performance web applications and e-commerce platforms.
   - E-commerce Platforms: Manage and customize Shopify, WooCommerce, and Magento, implementing optimized online shopping carts, payment gateways, and product catalogs.
   - Server & Cloud Management: Deploy, monitor, and scale applications on AWS and Google Cloud, ensuring security and performance optimization.
   - API Development & Integration: Design and implement RESTful and GraphQL APIs, integrating third-party services for enhanced functionality.
   - Version Control: Utilized Git and GitHub for managing code changes and collaborating across departments.
   - Database Management: Administer MySQL, PostgreSQL, and MongoDB, optimizing queries and enhancing performance.
-  - Team Leadership & Mentorship: Guide and mentor junior developers, conduct code reviews, and enforce best development practices to drive continuous improvement. Led a team of 10 junior developers, enhancing team productivity by 25%. Integrated secure payment gateways, improving transaction success rates by 30%.
+  - Team Leadership & Mentorship: Guide and mentor junior developers, conduct code reviews, and enforce best development practices to drive continuous improvement.
+    - Led a team of 10 junior developers, enhancing team productivity by 25%.
+    - Integrated secure payment gateways, improving transaction success rates by 30%.
 
   Full Stack Developer (Jun 2022 - Sep 2024)
   Middle East Fuji Group LLC - Al Quoz, Dubai
-  - Web Development: Design, develop, and maintain static and e-commerce websites for a group of companies. Implement responsive and user-friendly interfaces to enhance the user experience. Collaborate with UI/UX designers to translate design wireframes into functional web applications.
-  - E-commerce Platforms: Managed and customized e-commerce platforms such as Shopify, and WooCommerce, ensuring optimal performance. Implemented and optimized online shopping carts, payment gateways, and product catalogs.
-  - Server Management: Deploy, manage, and monitor AWS and Google Cloud applications. Ensure server security, scalability, and performance.
-  - Training and Mentorship: Provide training and mentorship to web developers, fostering skill development and knowledge transfer. Conduct code reviews to maintain coding standards and best practices.
-  - API Integration: Integrate 3rd party APIs to enhance website functionality and connectivity. Troubleshoot and debug API-related issues.
-  - Database Management: Utilized SQL and MySQL for efficient database management. Optimized database queries and performance.
+  Full Stack Developer with expertise in both static and e-commerce websites. Bring experience in training and mentoring junior web developers. The role involves working with a group of companies, ensuring the seamless operation of their online platforms. Extensive knowledge in various e-commerce platforms, AWS servers, Google Cloud, 3rd party APIs, CodeIgniter programs, and database management.
+  - Web Development: Design, develop, and maintain static and e-commerce websites for a group of companies. - Implement responsive and user-friendly interfaces to enhance the user experience. - Collaborate with UI/UX designers to translate design wireframes into functional web applications.
+  - E-commerce Platforms: Managed and customized e-commerce platforms such as Shopify, and WooCommerce, ensuring optimal performance. - Implemented and optimized online shopping carts, payment gateways, and product catalogs. - Stayed updated on emerging trends and technologies in e-commerce.
+  - Server Management: Deploy, manage, and monitor AWS and Google Cloud applications. - Ensure server security, scalability, and performance.
+  - Training and Mentorship: Provide training and mentorship to web developers, fostering skill development and knowledge transfer. - Conduct code reviews to maintain coding standards and best practices.
+  - API Integration: Integrate 3rd party APIs to enhance website functionality and connectivity. - Troubleshoot and debug API-related issues.
+  - Database Management: Utilized SQL and MySQL for efficient database management. - Optimized database queries and performance.
 
   Web Developer (Jan 2018 – Mar 2022)
   BroCrypt - Sri Lanka
@@ -101,6 +105,8 @@ const askMyAssistantPrompt = ai.definePrompt({
   Your goal is to answer questions about Roshan based ONLY on the context provided below.
   Be friendly, professional, and concise.
   Do not make up any information. If the answer is not in the context, say "I don't have that information, but you can reach out to Roshan via the contact page."
+  
+  IMPORTANT: You must format your response as a JSON object with a single key called "answer".
 
   CONTEXT:
   ---
