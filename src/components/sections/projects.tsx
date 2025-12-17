@@ -49,11 +49,11 @@ const projects = [
     liveUrl: '#',
   },
   {
-    title: 'Middle East Fuji Group',
-    subtitle: 'Oracle, Odoo, SAP, Cloud Infrastructure',
-    description: 'Customized and integrated internal systems to streamline cross-functional workflows across departments.',
-    image: PlaceHolderImages.find((img) => img.id === 'mefg')?.imageUrl || '',
-    tags: ['Oracle', 'Odoo', 'SAP', 'Cloud Infrastructure'],
+    title: 'Human Resource Management System (HRMS)',
+    subtitle: 'Odoo, SAP, Custom HR Modules',
+    description: 'Developed and implemented a comprehensive HRMS to manage employee lifecycle, payroll, and performance tracking. Integrated internal systems like Oracle, Odoo, and SAP to streamline cross-functional workflows.',
+    image: PlaceHolderImages.find((img) => img.id === 'hrms')?.imageUrl || '',
+    tags: ['Odoo', 'HRMS', 'Python', 'System Design', 'Oracle', 'SAP'],
     liveUrl: '#',
   },
   {
@@ -78,14 +78,6 @@ const projects = [
     description: 'A comprehensive platform for online visa application and processing, offering services for visit visas, pick & drop, cruises, and resort bookings.',
     image: PlaceHolderImages.find((img) => img.id === 'uber-evisa')?.imageUrl || '',
     tags: ['Visa Services', 'Web Application', 'Automation'],
-    liveUrl: '#',
-  },
-  {
-    title: 'Human Resource Management System (HRMS)',
-    subtitle: 'Odoo, Custom HR Modules',
-    description: 'Developed and implemented a comprehensive HRMS to manage employee lifecycle, payroll, and performance tracking.',
-    image: PlaceHolderImages.find((img) => img.id === 'hrms')?.imageUrl || '',
-    tags: ['Odoo', 'HRMS', 'Python', 'System Design'],
     liveUrl: '#',
   },
 ];
