@@ -33,11 +33,11 @@ export default function AiSuggesterSection() {
   return (
     <section id="ai-suggester" className="w-full py-16 md:py-24 lg:py-32">
       <div className="container mx-auto px-4 md:px-6 flex justify-center">
-        <Animated as={Card} delay={0.3} className="w-full max-w-2xl shadow-xl">
+        <Animated as={Card} delay={0.3} className="w-full max-w-2xl shadow-xl rounded-lg">
           <CardHeader className="text-center">
             <Wand2 className="mx-auto h-10 w-10 text-primary mb-2" />
-            <CardTitle className="text-3xl md:text-4xl font-bold font-headline">Need Project Ideas?</CardTitle>
-            <CardDescription className="text-xl">Let AI suggest some projects based on my skills to impress employers.</CardDescription>
+            <CardTitle className="text-3xl md:text-4xl font-bold">Need Project Ideas?</CardTitle>
+            <CardDescription className="text-base text-muted-foreground">Let AI suggest some projects based on my skills to impress employers.</CardDescription>
           </CardHeader>
           <CardContent>
             {error && (
@@ -53,8 +53,8 @@ export default function AiSuggesterSection() {
             )}
             {suggestions && (
               <div className="mt-4 space-y-4">
-                <h4 className="font-semibold text-xl">Here are some ideas:</h4>
-                <ul className="list-disc list-inside space-y-2 text-foreground/80">
+                <h4 className="font-semibold text-lg">Here are some ideas:</h4>
+                <ul className="list-disc list-inside space-y-2 text-foreground/80 text-base">
                   {suggestions.projects.map((project, index) => (
                     <li key={index}>{project}</li>
                   ))}
@@ -63,7 +63,7 @@ export default function AiSuggesterSection() {
             )}
           </CardContent>
           <CardFooter className="flex justify-center">
-            <Button size="lg" onClick={handleSuggestProjects} disabled={loading} className="text-lg">
+            <Button size="lg" onClick={handleSuggestProjects} disabled={loading} className="text-base">
               {loading ? (
                 <>
                   <Loader2 className="mr-2 h-4 w-4 animate-spin" />

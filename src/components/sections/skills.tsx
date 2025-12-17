@@ -50,29 +50,29 @@ const skillsData = [
 const SkillCard = ({ name, icon }: { name: string; icon: React.ReactNode }) => (
   <div className="flex flex-col items-center justify-center gap-2 p-4 rounded-lg bg-background hover:bg-accent/50 transition-colors">
     {icon}
-    <p className="text-base font-medium text-center">{name}</p>
+    <p className="text-sm font-medium text-center">{name}</p>
   </div>
 );
 
 export default function SkillsSection() {
   return (
-    <section id="skills" className="w-full py-16 md:py-24 lg:py-32 bg-muted/30 overflow-hidden">
+    <section id="skills" className="w-full py-16 md:py-24 lg:py-32 bg-background overflow-hidden">
       <div className="container mx-auto px-4 md:px-6">
         <Animated as="div" className="space-y-4 text-center mb-12">
-          <h2 className="text-4xl font-bold sm:text-5xl md:text-6xl font-headline">
+          <h2 className="text-4xl font-bold sm:text-5xl md:text-6xl">
             Skills & Expertise
           </h2>
-          <p className="max-w-[700px] mx-auto text-foreground/80 text-xl md:text-2xl">
+          <p className="max-w-[700px] mx-auto text-foreground/80 text-base md:text-lg">
             The tools and technologies I use to bring projects to life.
           </p>
         </Animated>
         <div className="grid gap-8 md:grid-cols-1 lg:grid-cols-3">
           {skillsData.map((category, index) => (
             <Animated as="div" key={category.category} delay={0.2 * (index + 1)}>
-              <Card className="shadow-lg h-full">
+              <Card className="shadow-lg h-full rounded-lg">
                 <CardHeader className="flex flex-row items-center gap-4">
                   {category.icon}
-                  <CardTitle className="text-3xl font-bold">{category.category}</CardTitle>
+                  <CardTitle className="text-2xl font-bold">{category.category}</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">

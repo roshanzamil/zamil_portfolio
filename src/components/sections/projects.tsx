@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { Card, CardContent, CardFooter, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
+import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
@@ -60,49 +60,51 @@ const projects = [
 
 export default function ProjectsSection() {
   return (
-    <section id="projects" className="w-full py-16 md:py-24 lg:py-32 overflow-hidden">
+    <section id="projects" className="w-full py-16 md:py-24 lg:py-32 overflow-hidden bg-background">
       <div className="container mx-auto px-4 md:px-6">
-        <Animated as="div" className="space-y-4 text-center mb-12">
-          <h2 className="text-4xl font-bold sm:text-5xl md:text-6xl font-headline">
+        <Animated as="div" className="space-y-2 text-center mb-12">
+          <h2 className="text-4xl font-bold sm:text-5xl md:text-6xl uppercase tracking-tight">
             My Projects
           </h2>
-          <p className="max-w-[700px] mx-auto text-foreground/80 text-xl md:text-2xl">
+          <p className="max-w-[700px] mx-auto text-foreground/80 text-base md:text-lg uppercase">
             Here are some of the key projects I've worked on.
           </p>
         </Animated>
         <div className="grid gap-8 md:grid-cols-1 lg:grid-cols-2">
           {projects.map((project, index) => (
             <Animated as="div" delay={0.2 * (index + 1)} key={project.title}>
-              <Card className="flex flex-col overflow-hidden transition-transform duration-300 hover:scale-105 hover:shadow-xl h-full">
+              <Card className="flex flex-col overflow-hidden transition-shadow duration-300 hover:shadow-2xl h-full bg-card rounded-lg border-none shadow-lg">
                 {project.image && (
-                  <CardHeader className="p-0">
+                  <div className="overflow-hidden">
                     <Image
                       src={project.image.imageUrl}
                       alt={project.description}
                       width={600}
                       height={400}
-                      className="object-cover w-full h-48"
+                      className="object-cover w-full h-64 transition-transform duration-500 ease-in-out hover:scale-105"
                       data-ai-hint={project.image.imageHint}
                     />
-                  </CardHeader>
+                  </div>
                 )}
-                <CardContent className="flex-1 p-6 space-y-3">
-                  <CardTitle className="text-2xl font-bold">{project.title}</CardTitle>
-                  <p className="text-lg font-medium text-muted-foreground">{project.subtitle}</p>
-                  <CardDescription className="text-lg text-foreground/80">{project.description}</CardDescription>
+                <CardContent className="flex-1 p-6 space-y-4">
+                  <div>
+                    <h3 className="text-2xl font-bold uppercase tracking-tight">{project.title}</h3>
+                    <p className="text-sm font-medium text-muted-foreground uppercase">{project.subtitle}</p>
+                  </div>
+                  <p className="text-base text-foreground/80">{project.description}</p>
                   <div className="flex flex-wrap gap-2 pt-2">
                     {project.tags.map((tag) => (
-                      <Badge key={tag} variant="secondary" className="text-base">{tag}</Badge>
+                      <Badge key={tag} variant="secondary" className="text-sm bg-secondary hover:bg-secondary/80 rounded-md">{tag}</Badge>
                     ))}
                   </div>
                 </CardContent>
-                <CardFooter className="p-6 pt-0 flex justify-end gap-2">
-                  <Button variant="outline" size="sm" asChild className="text-base">
+                <div className="p-6 pt-0 flex justify-end">
+                  <Button variant="ghost" size="sm" asChild className="text-base text-muted-foreground hover:text-primary">
                     <Link href={project.liveUrl} target="_blank">
                       <ExternalLink className="mr-2 h-4 w-4" /> Live Site
                     </Link>
                   </Button>
-                </CardFooter>
+                </div>
               </Card>
             </Animated>
           ))}

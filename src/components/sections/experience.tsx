@@ -35,13 +35,13 @@ const experiences = [
 
 export default function ExperienceSection() {
   return (
-    <section id="experience" className="w-full py-16 md:py-24 lg:py-32 overflow-hidden">
+    <section id="experience" className="w-full py-16 md:py-24 lg:py-32 overflow-hidden bg-background">
       <div className="container mx-auto px-4 md:px-6">
         <Animated as="div" className="space-y-4 text-center mb-12">
-          <h2 className="text-4xl font-bold sm:text-5xl md:text-6xl font-headline">
+          <h2 className="text-4xl font-bold sm:text-5xl md:text-6xl">
             My Experience
           </h2>
-          <p className="max-w-[700px] mx-auto text-foreground/80 text-xl md:text-2xl">
+          <p className="max-w-[700px] mx-auto text-foreground/80 text-base md:text-lg">
             A timeline of my professional roles and accomplishments.
           </p>
         </Animated>
@@ -59,14 +59,14 @@ export default function ExperienceSection() {
                 
                 {/* Content */}
                 <div className="w-full pl-16 md:pl-0 md:w-[calc(50%-2.5rem)] space-y-3">
-                  <div className="bg-muted/50 p-6 rounded-lg shadow-md border border-border/50">
+                  <div className="bg-card p-6 rounded-lg shadow-md border border-border/50">
                     <h3 className="text-2xl font-bold text-primary">{experience.role}</h3>
-                    <p className="font-semibold text-xl">{experience.company}</p>
-                    <p className="text-base text-muted-foreground mb-3">{experience.period}</p>
-                    <p className="text-lg text-foreground/80 mb-4">{experience.description}</p>
+                    <p className="font-semibold text-lg">{experience.company}</p>
+                    <p className="text-sm text-muted-foreground mb-3">{experience.period}</p>
+                    <p className="text-base text-foreground/80 mb-4">{experience.description}</p>
                     <div className="flex flex-wrap gap-2">
                       {experience.tags.map((tag) => (
-                        <Badge key={tag} variant="secondary" className="text-base">{tag}</Badge>
+                        <Badge key={tag} variant="secondary" className="text-sm">{tag}</Badge>
                       ))}
                     </div>
                   </div>
