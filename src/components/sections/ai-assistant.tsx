@@ -8,7 +8,7 @@ import { Input } from "@/components/ui/input";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { cn } from "@/lib/utils";
-import { Loader2, Bot, User, CornerDownLeft, Sparkles } from "lucide-react";
+import { Loader2, User, CornerDownLeft, Sparkles } from "lucide-react";
 import { Animated } from "@/components/ui/animated";
 
 type Message = {
@@ -16,8 +16,13 @@ type Message = {
   content: string;
 };
 
+const initialMessage: Message = {
+  role: 'assistant',
+  content: "Hello! I'm RZM-AI, Roshan Zamil Moulana's AI assistant. How can I help you today regarding Roshan's portfolio?"
+};
+
 export default function AiAssistantSection() {
-  const [messages, setMessages] = useState<Message[]>([]);
+  const [messages, setMessages] = useState<Message[]>([initialMessage]);
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const scrollAreaRef = useRef<HTMLDivElement>(null);
@@ -43,7 +48,8 @@ export default function AiAssistantSection() {
     setInput("");
 
     try {
-      const history: AskMyAssistantInput['history'] = messages.map(msg => ({
+      // Filter out the initial message before sending to the AI
+      const history: AskMyAssistantInput['history'] = messages.filter(msg => msg.content !== initialMessage.content).map(msg => ({
         role: msg.role === 'assistant' ? 'assistant' : 'user',
         content: msg.content
       }));
@@ -72,7 +78,7 @@ export default function AiAssistantSection() {
                 My Assistant
             </div>
           <h2 className="text-4xl font-bold sm:text-5xl md:text-6xl">
-            Ask Me Anything
+            ASK ME ANYTHING
           </h2>
           <p className="max-w-[700px] mx-auto text-foreground/80 text-base md:text-lg">
             Have a question about my skills or experience? Ask my AI assistant. 
@@ -94,7 +100,7 @@ export default function AiAssistantSection() {
                   >
                     {message.role === "assistant" && (
                       <Avatar className="w-8 h-8 border-2 border-primary">
-                         {avatar && <AvatarImage src={avatar.imageUrl} alt="RZM-AI" />}
+                         {avatar && <AvatarImage src={avatar.imageUrl} alt="RZM-AI" unoptimized />}
                         <AvatarFallback>AI</AvatarFallback>
                       </Avatar>
                     )}
@@ -109,8 +115,10 @@ export default function AiAssistantSection() {
                       <p>{message.content}</p>
                     </div>
                      {message.role === "user" && (
-                      <Avatar className="w-8 h-8">
-                        <AvatarFallback><User/></AvatarFallback>
+                      <Avatar className="w-8 h-8 bg-muted">
+                         <div className="flex items-center justify-center w-full h-full">
+                            <User className="w-5 h-5 text-muted-foreground" />
+                        </div>
                       </Avatar>
                     )}
                   </div>
@@ -118,7 +126,7 @@ export default function AiAssistantSection() {
                 {isLoading && (
                   <div className="flex items-start gap-3 justify-start">
                     <Avatar className="w-8 h-8 border-2 border-primary">
-                      {avatar && <AvatarImage src={avatar.imageUrl} alt="RZM-AI" />}
+                      {avatar && <AvatarImage src={avatar.imageUrl} alt="RZM-AI" unoptimized />}
                       <AvatarFallback>AI</AvatarFallback>
                     </Avatar>
                     <div className="rounded-lg px-4 py-2 text-base bg-muted text-muted-foreground flex items-center">
@@ -127,13 +135,6 @@ export default function AiAssistantSection() {
                     </div>
                   </div>
                 )}
-                 {messages.length === 0 && (
-                    <div className="text-center text-muted-foreground py-16">
-                        <Bot className="h-12 w-12 mx-auto mb-4" />
-                        <p className="text-lg">Hi, I'm RZM-AI. Ask me a question about Roshan!</p>
-                        <p className="text-sm">e.g., "What are his strongest skills?"</p>
-                    </div>
-                 )}
               </div>
             </ScrollArea>
             <div className="p-4 border-t">
@@ -145,7 +146,7 @@ export default function AiAssistantSection() {
                   className="flex-1"
                   disabled={isLoading}
                 />
-                <Button type="submit" disabled={isLoading}>
+                <Button type="submit" disabled={isLoading} size="icon">
                   {isLoading ? <Loader2 className="h-5 w-5 animate-spin" /> : <CornerDownLeft className="h-5 w-5"/>}
                   <span className="sr-only">Send</span>
                 </Button>
