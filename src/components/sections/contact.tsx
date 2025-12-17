@@ -64,7 +64,7 @@ export default function ContactSection() {
       toast({
         variant: "destructive",
         title: "Uh oh! Something went wrong.",
-        description: "There was a problem sending your message. Please try again.",
+        description: result.error || "There was a problem sending your message. Please try again.",
       });
     }
   }
@@ -135,7 +135,7 @@ export default function ContactSection() {
                               render={({ field }) => (
                                  <FormItem className="flex-1 min-w-[200px]">
                                   <FormControl>
-                                      <Select onValueChange={field.onChange} defaultValue={field.value}>
+                                      <Select onValueChange={field.onChange} value={field.value}>
                                           <SelectTrigger className="w-full bg-transparent border-0 border-b-2 border-input rounded-none text-xl md:text-2xl px-1 h-auto py-0 focus:ring-0 focus:ring-offset-0 text-muted-foreground data-[placeholder]:text-muted-foreground">
                                               <SelectValue placeholder="Select Dropdown" />
                                           </SelectTrigger>
