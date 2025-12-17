@@ -9,6 +9,60 @@ import { Dialog, DialogTrigger } from '@/components/ui/dialog';
 
 const projects: Project[] = [
   {
+    title: 'Uber E-Visa',
+    subtitle: 'Visa Service Platform',
+    description: 'A comprehensive platform for online visa application and processing, offering services for visit visas, pick & drop, cruises, and resort bookings.',
+    image: PlaceHolderImages.find((img) => img.id === 'uber-evisa')?.imageUrl || '',
+    tags: ['Visa Services', 'Web Application', 'Automation'],
+    liveUrl: 'https://uberevisa.com/',
+    details: {
+      longDescription: 'Uber E-Visa is an all-in-one portal designed to simplify the visa application process. It offers a user-friendly interface to apply for various types of visas, book associated travel services like pick & drop, and even explore leisure options such as cruises and resorts. The platform automates much of the application workflow to ensure speed and accuracy.',
+      keyFeatures: [
+        'Dynamic visa application forms',
+        'Secure document and photo uploads',
+        'Integrated booking for travel and leisure services',
+        'Automated status updates and notifications',
+      ],
+      technologies: ['React', 'Node.js', 'Express', 'MongoDB', 'REST API'],
+    }
+  },
+  {
+    title: 'Diaflower',
+    subtitle: 'E-commerce Flower Shop',
+    description: 'A beautiful online store for a flower shop.',
+    image: PlaceHolderImages.find((img) => img.id === 'diaflower')?.imageUrl || '',
+    tags: ['E-commerce', 'UI/UX'],
+    liveUrl: 'https://diaflower.com/',
+    details: {
+      longDescription: 'Diaflower is a visually-driven e-commerce platform for a boutique flower shop. The site focuses on high-quality imagery and a simple, elegant user experience to make ordering flowers online a delightful experience. It includes features for occasion-based filtering, custom bouquets, and a streamlined checkout process.',
+      keyFeatures: [
+        'Visually-rich product catalog',
+        'Custom bouquet builder',
+        'Scheduled delivery options',
+        'Secure online payment integration',
+      ],
+      technologies: ['Shopify', 'Liquid', 'JavaScript', 'CSS3', 'Figma'],
+    }
+  },
+  {
+    title: 'Human Resource Management System (HRMS)',
+    subtitle: 'Odoo, SAP, Custom HR Modules',
+    description: 'Developed and implemented a comprehensive HRMS to manage employee lifecycle, payroll, and performance tracking. Integrated internal systems like Oracle, Odoo, and SAP to streamline cross-functional workflows.',
+    image: PlaceHolderImages.find((img) => img.id === 'hrms')?.imageUrl || '',
+    tags: ['Odoo', 'HRMS', 'Python', 'System Design', 'Oracle', 'SAP'],
+    liveUrl: '#',
+    details: {
+      longDescription: 'This comprehensive Human Resource Management System was engineered to unify and automate all aspects of employee management for Middle East Fuji. It integrates disparate systems like Oracle, Odoo, and SAP, creating a single source of truth for the entire employee lifecycle—from recruitment and onboarding to payroll, performance reviews, and offboarding.',
+      keyFeatures: [
+        'Centralized employee database',
+        'Automated payroll and benefits administration',
+        'Performance management and appraisal workflows',
+        'Seamless integration with Oracle, Odoo, and SAP',
+      ],
+      technologies: ['Python', 'Odoo', 'SAP Integration', 'Oracle DB', 'XML-RPC', 'JavaScript']
+    }
+  },
+  {
     title: 'PreCASPrep',
     subtitle: 'Web platform for university interview practice',
     description: 'Web platform for university interview practice with expert feedback and progress tracking.',
@@ -99,24 +153,6 @@ const projects: Project[] = [
     }
   },
   {
-    title: 'Human Resource Management System (HRMS)',
-    subtitle: 'Odoo, SAP, Custom HR Modules',
-    description: 'Developed and implemented a comprehensive HRMS to manage employee lifecycle, payroll, and performance tracking. Integrated internal systems like Oracle, Odoo, and SAP to streamline cross-functional workflows.',
-    image: PlaceHolderImages.find((img) => img.id === 'hrms')?.imageUrl || '',
-    tags: ['Odoo', 'HRMS', 'Python', 'System Design', 'Oracle', 'SAP'],
-    liveUrl: '#',
-    details: {
-      longDescription: 'This comprehensive Human Resource Management System was engineered to unify and automate all aspects of employee management for Middle East Fuji. It integrates disparate systems like Oracle, Odoo, and SAP, creating a single source of truth for the entire employee lifecycle—from recruitment and onboarding to payroll, performance reviews, and offboarding.',
-      keyFeatures: [
-        'Centralized employee database',
-        'Automated payroll and benefits administration',
-        'Performance management and appraisal workflows',
-        'Seamless integration with Oracle, Odoo, and SAP',
-      ],
-      technologies: ['Python', 'Odoo', 'SAP Integration', 'Oracle DB', 'XML-RPC', 'JavaScript']
-    }
-  },
-  {
     title: 'Warehouse Management System',
     subtitle: 'Odoo, AS400',
     description: "Streamlined Middle East Fuji's end-to-end business workflow—from data upload in Dubai to order processing in the Philippines, quotation approval, warehouse fulfillment, and final delivery via logistics.",
@@ -132,42 +168,6 @@ const projects: Project[] = [
         "Automated quotation and approval process"
       ],
       technologies: ["Odoo", "Python", "AS400/DB2", "XML", "JavaScript"]
-    }
-  },
-  {
-    title: 'Diaflower',
-    subtitle: 'E-commerce Flower Shop',
-    description: 'A beautiful online store for a flower shop.',
-    image: PlaceHolderImages.find((img) => img.id === 'diaflower')?.imageUrl || '',
-    tags: ['E-commerce', 'UI/UX'],
-    liveUrl: 'https://diaflower.com/',
-    details: {
-      longDescription: 'Diaflower is a visually-driven e-commerce platform for a boutique flower shop. The site focuses on high-quality imagery and a simple, elegant user experience to make ordering flowers online a delightful experience. It includes features for occasion-based filtering, custom bouquets, and a streamlined checkout process.',
-      keyFeatures: [
-        'Visually-rich product catalog',
-        'Custom bouquet builder',
-        'Scheduled delivery options',
-        'Secure online payment integration',
-      ],
-      technologies: ['Shopify', 'Liquid', 'JavaScript', 'CSS3', 'Figma'],
-    }
-  },
-  {
-    title: 'Uber E-Visa',
-    subtitle: 'Visa Service Platform',
-    description: 'A comprehensive platform for online visa application and processing, offering services for visit visas, pick & drop, cruises, and resort bookings.',
-    image: PlaceHolderImages.find((img) => img.id === 'uber-evisa')?.imageUrl || '',
-    tags: ['Visa Services', 'Web Application', 'Automation'],
-    liveUrl: 'https://uberevisa.com/',
-    details: {
-      longDescription: 'Uber E-Visa is an all-in-one portal designed to simplify the visa application process. It offers a user-friendly interface to apply for various types of visas, book associated travel services like pick & drop, and even explore leisure options such as cruises and resorts. The platform automates much of the application workflow to ensure speed and accuracy.',
-      keyFeatures: [
-        'Dynamic visa application forms',
-        'Secure document and photo uploads',
-        'Integrated booking for travel and leisure services',
-        'Automated status updates and notifications',
-      ],
-      technologies: ['React', 'Node.js', 'Express', 'MongoDB', 'REST API'],
     }
   },
 ];
