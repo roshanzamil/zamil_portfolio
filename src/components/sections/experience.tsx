@@ -51,7 +51,7 @@ export default function ExperienceSection() {
 
           <div className="space-y-12">
             {experiences.map((experience, index) => (
-              <Animated key={experience.company} delay={0.1 * (index + 1)} className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+              <Animated key={experience.company} delay={0.2 * (index + 1)} className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
                 {/* Icon in the middle */}
                 <div className="flex items-center justify-center w-10 h-10 rounded-full border-2 border-primary bg-background text-primary absolute left-1/2 -translate-x-1/2 md:group-odd:-translate-x-0 md:group-even:-translate-x-0 z-10">
                   <Briefcase className="w-5 h-5" />

@@ -68,7 +68,7 @@ export default function SkillsSection() {
         </Animated>
         <div className="grid gap-8 md:grid-cols-1 lg:grid-cols-3">
           {skillsData.map((category, index) => (
-            <Animated as="div" key={category.category} delay={0.1 * (index + 1)}>
+            <Animated as="div" key={category.category} delay={0.2 * (index + 1)}>
               <Card className="shadow-lg h-full">
                 <CardHeader className="flex flex-row items-center gap-4">
                   {category.icon}

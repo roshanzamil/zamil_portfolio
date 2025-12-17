@@ -18,8 +18,8 @@ type AnimatedProps = {
 export function Animated({
   children,
   delay = 0,
-  duration = 0.5,
-  y = 20,
+  duration = 0.8,
+  y = 50,
   x = 0,
   opacity = 0,
   scale = 1,
@@ -40,7 +40,7 @@ export function Animated({
         scale: 1,
         delay,
         duration,
-        ease: 'power3.out',
+        ease: 'expo.out',
         scrollTrigger: {
           trigger: el.current,
           start: 'top 90%',

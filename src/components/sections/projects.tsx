@@ -72,7 +72,7 @@ export default function ProjectsSection() {
         </Animated>
         <div className="grid gap-8 md:grid-cols-1 lg:grid-cols-2">
           {projects.map((project, index) => (
-            <Animated as="div" delay={0.1 * (index + 1)} key={project.title}>
+            <Animated as="div" delay={0.2 * (index + 1)} key={project.title}>
               <Card className="flex flex-col overflow-hidden transition-transform duration-300 hover:scale-105 hover:shadow-xl h-full">
                 {project.image && (
                   <CardHeader className="p-0">

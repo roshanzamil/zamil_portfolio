@@ -23,7 +23,7 @@ export default function AboutSection() {
               </p>
             </div>
           </Animated>
-          <Animated as="div" delay={0.2} x={50} className="flex justify-center">
+          <Animated as="div" delay={0.3} x={50} className="flex justify-center">
             {aboutImage && (
               <Card className="overflow-hidden shadow-xl">
                 <CardContent className="p-0">

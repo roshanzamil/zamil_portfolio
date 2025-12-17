@@ -13,7 +13,7 @@ export default function HeroSection() {
       <div className="container mx-auto px-4 md:px-6 text-center">
         <div className="flex flex-col items-center space-y-6">
           {avatar && (
-            <Animated as="div" delay={0.1}>
+            <Animated as="div" delay={0.2}>
               <Image
                 src={avatar.imageUrl}
                 alt={avatar.description}
@@ -26,14 +26,14 @@ export default function HeroSection() {
             </Animated>
           )}
           <div className="space-y-2">
-            <Animated as="h1" delay={0.2} className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl font-headline text-primary">
+            <Animated as="h1" delay={0.3} className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl font-headline text-primary">
               Roshan Zamil Moulana
             </Animated>
-            <Animated as="p" delay={0.3} className="max-w-[700px] mx-auto text-foreground/80 md:text-xl">
+            <Animated as="p" delay={0.4} className="max-w-[700px] mx-auto text-foreground/80 md:text-xl">
               Full Stack Developer – E-Commerce Specialist
             </Animated>
           </div>
-          <Animated as="div" delay={0.4} className="flex flex-col sm:flex-row gap-4">
+          <Animated as="div" delay={0.5} className="flex flex-col sm:flex-row gap-4">
             <Button asChild size="lg">
               <Link href="/contact">Contact Me</Link>
             </Button>

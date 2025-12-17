@@ -62,7 +62,7 @@ export default function ContactSection() {
           </p>
         </Animated>
         <div className="grid lg:grid-cols-2 gap-12">
-          <Animated as="div" className="space-y-6">
+          <Animated as="div" delay={0.2} className="space-y-6">
             <div className="flex items-start gap-4">
               <Mail className="h-6 w-6 text-primary mt-1"/>
               <div>
@@ -85,7 +85,7 @@ export default function ContactSection() {
               </div>
             </div>
           </Animated>
-          <Animated as="div" delay={0.2} className="w-full">
+          <Animated as="div" delay={0.3} className="w-full">
             <Form {...form}>
               <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
                 <FormField
