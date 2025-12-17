@@ -17,6 +17,7 @@ const formSchema = z.object({
 export async function sendEmail(formData: z.infer<typeof formSchema>) {
   try {
     const { name, email, lookingFor } = formSchema.parse(formData);
+    const reactEmail = await import('react-email');
 
     const { data, error } = await resend.emails.send({
       from: `Contact Form <${fromEmail}>`,
