@@ -26,7 +26,7 @@ export default function HeroSection() {
             </Animated>
           )}
           <div className="space-y-2">
-            <Animated as="h1" delay={0.3} className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl font-headline text-primary">
+            <Animated as="h1" delay={0.3} className="text-4xl font-bold sm:text-5xl md:text-6xl lg:text-7xl font-headline text-primary">
               Roshan Zamil Moulana
             </Animated>
             <Animated as="p" delay={0.4} className="max-w-[700px] mx-auto text-foreground/80 md:text-xl">

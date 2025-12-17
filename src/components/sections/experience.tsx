@@ -38,7 +38,7 @@ export default function ExperienceSection() {
     <section id="experience" className="w-full py-16 md:py-24 lg:py-32 overflow-hidden">
       <div className="container mx-auto px-4 md:px-6">
         <Animated as="div" className="space-y-4 text-center mb-12">
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl font-headline">
+          <h2 className="text-3xl font-bold sm:text-4xl md:text-5xl font-headline">
             My Experience
           </h2>
           <p className="max-w-[700px] mx-auto text-foreground/80 md:text-xl">

@@ -11,7 +11,7 @@ export default function AboutSection() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid gap-10 lg:grid-cols-2 lg:gap-16 items-center">
           <Animated as="div" className="space-y-4">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl font-headline">
+            <h2 className="text-3xl font-bold sm:text-4xl md:text-5xl font-headline">
               About Me
             </h2>
             <div className="text-foreground/80 space-y-4 text-base md:text-lg">
@@ -19,7 +19,7 @@ export default function AboutSection() {
                 I am an accomplished Full Stack Developer and E-Commerce Specialist. I have successfully developed a million-euro web application that increased revenue by 35%, improved customer engagement by 50%, and optimized conversion rates by 30% using sales funnel techniques. 
               </p>
               <p>
-                Skilled in PHP, NodeJS, Symfony, Laravel, Java, Python, AngularJS, ReactJS, and cloud infrastructure, with expertise in API integrations, DevOps, CI/CD pipelines, and database performance optimization. I have a proven ability to lead cross-functional teams, streamline development processes, and deliver scalable, high-performing applications.
+                Skilled in PHP, NodeJS, Symfony, Laravel, Java, Python, AngularJS, ReactJS, and cloud infrastructure, with expertise in API integrations, DevOps, CI/CD pipelines, and database performance optimization. Proven ability to lead cross functional team of 5, streamline development processes, and deliver scalable, high performing applications.
               </p>
             </div>
           </Animated>

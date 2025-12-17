@@ -36,7 +36,7 @@ export default function AiSuggesterSection() {
         <Animated as={Card} delay={0.3} className="w-full max-w-2xl shadow-xl">
           <CardHeader className="text-center">
             <Wand2 className="mx-auto h-10 w-10 text-primary mb-2" />
-            <CardTitle className="text-2xl md:text-3xl font-bold font-headline tracking-tighter">Need Project Ideas?</CardTitle>
+            <CardTitle className="text-2xl md:text-3xl font-bold font-headline">Need Project Ideas?</CardTitle>
             <CardDescription>Let AI suggest some projects based on my skills to impress employers.</CardDescription>
           </CardHeader>
           <CardContent>
