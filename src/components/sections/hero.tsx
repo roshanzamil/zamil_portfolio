@@ -33,8 +33,11 @@ export default function HeroSection() {
             <Animated as="p" delay={0.4} className="max-w-[700px] mx-auto text-foreground/80 text-lg md:text-xl font-headline">
               Full Stack Developer – E-Commerce Specialist
             </Animated>
+            <Animated as="p" delay={0.5} className="max-w-[700px] mx-auto text-foreground/80 text-base md:text-lg pt-4">
+              I'm a Full Stack Developer specializing in e-commerce. I build high-impact web applications that drive revenue and user engagement, with expertise in React, Node.js, PHP, and cloud infrastructure.
+            </Animated>
           </div>
-          <Animated as="div" delay={0.5} className="flex flex-col sm:flex-row gap-4">
+          <Animated as="div" delay={0.6} className="flex flex-col sm:flex-row gap-4">
             <Button asChild size="lg" className="text-base">
               <Link href="/contact">Contact Me</Link>
             </Button>
