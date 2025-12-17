@@ -100,7 +100,7 @@ export default function AiAssistantSection() {
                   >
                     {message.role === "assistant" && (
                       <Avatar className="w-8 h-8 border-2 border-primary">
-                         {avatar && <AvatarImage src={avatar.imageUrl} alt="RZM-AI" unoptimized />}
+                         {avatar && <AvatarImage src={avatar.imageUrl} alt="RZM-AI" />}
                         <AvatarFallback>AI</AvatarFallback>
                       </Avatar>
                     )}
@@ -126,7 +126,7 @@ export default function AiAssistantSection() {
                 {isLoading && (
                   <div className="flex items-start gap-3 justify-start">
                     <Avatar className="w-8 h-8 border-2 border-primary">
-                      {avatar && <AvatarImage src={avatar.imageUrl} alt="RZM-AI" unoptimized />}
+                      {avatar && <AvatarImage src={avatar.imageUrl} alt="RZM-AI" />}
                       <AvatarFallback>AI</AvatarFallback>
                     </Avatar>
                     <div className="rounded-lg px-4 py-2 text-base bg-muted text-muted-foreground flex items-center">
