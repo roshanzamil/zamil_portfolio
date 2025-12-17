@@ -9,7 +9,7 @@ export default function HeroSection() {
   const avatar = PlaceHolderImages.find((img) => img.id === 'roshan-avatar');
 
   return (
-    <section id="home" className="relative w-full h-[calc(100svh-4rem)] flex items-center justify-center overflow-hidden">
+    <section id="home" className="relative w-full min-h-[calc(100svh-4rem)] flex flex-col justify-center py-16 sm:py-20 overflow-hidden">
       <div className="container mx-auto px-4 md:px-6 text-center">
         <div className="flex flex-col items-center space-y-6">
           {avatar && (
