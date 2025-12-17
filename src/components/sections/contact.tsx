@@ -98,58 +98,66 @@ export default function ContactSection() {
                 <CardContent>
                     <Form {...form}>
                       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
-                        <div className="text-xl md:text-2xl space-y-8">
-                          <FormField
-                            control={form.control}
-                            name="name"
-                            render={({ field }) => (
-                              <FormItem className='flex items-center gap-2 flex-wrap'>
-                                <FormLabel className='font-normal'>Hey, my name is</FormLabel>
-                                <FormControl>
-                                  <Input placeholder="Type Here" {...field} className="inline-block w-auto min-w-[150px] bg-transparent border-0 border-b rounded-none text-xl md:text-2xl px-2 focus-visible:ring-0 focus-visible:ring-offset-0"/>
-                                </FormControl>
-                                <FormLabel className='font-normal'>and I'm looking for</FormLabel>
-                                <FormMessage />
-                              </FormItem>
-                            )}
-                          />
-                           <FormField
-                            control={form.control}
-                            name="lookingFor"
-                            render={({ field }) => (
-                               <FormItem className='flex items-center gap-2 flex-wrap'>
-                                <FormControl>
-                                    <Select onValueChange={field.onChange} defaultValue={field.value}>
-                                        <SelectTrigger className="inline-block w-auto min-w-[200px] bg-transparent border-0 border-b rounded-none text-xl md:text-2xl px-2 focus:ring-0 focus:ring-offset-0 text-muted-foreground data-[placeholder]:text-muted-foreground">
-                                            <SelectValue placeholder="Select Dropdown" />
-                                        </SelectTrigger>
-                                        <SelectContent>
-                                            <SelectItem value="full-time-role">a full-time role</SelectItem>
-                                            <SelectItem value="freelance-project">a freelance project</SelectItem>
-                                            <SelectItem value="collaboration">a collaboration</SelectItem>
-                                            <SelectItem value="just-to-say-hi">just to say hi</SelectItem>
-                                        </SelectContent>
-                                    </Select>
-                                </FormControl>
-                                <FormMessage />
-                               </FormItem>
-                            )}
+                        <div className="text-xl md:text-2xl space-y-6">
+                          
+                          <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
+                             <FormField
+                              control={form.control}
+                              name="name"
+                              render={({ field }) => (
+                                <FormItem className='flex items-center gap-2'>
+                                  <FormLabel className='font-normal'>Hey, my name is</FormLabel>
+                                  <FormControl>
+                                    <Input placeholder="Type Here" {...field} className="inline-block w-auto min-w-[150px] bg-transparent border-0 border-b rounded-none text-xl md:text-2xl px-1 focus-visible:ring-0 focus-visible:ring-offset-0"/>
+                                  </FormControl>
+                                </FormItem>
+                              )}
                             />
+                            <FormLabel className='font-normal'>and I'm looking for</FormLabel>
+                             <FormMessage className='w-full' />
+                          </div>
 
-                          <FormField
-                            control={form.control}
-                            name="email"
-                            render={({ field }) => (
-                              <FormItem className='flex items-center gap-2 flex-wrap'>
-                                <FormLabel className='font-normal'>Get in touch with me at</FormLabel>
-                                <FormControl>
-                                  <Input placeholder="Your Email ID Here" {...field} className="inline-block w-auto min-w-[200px] bg-transparent border-0 border-b rounded-none text-xl md:text-2xl px-2 focus-visible:ring-0 focus-visible:ring-offset-0"/>
-                                </FormControl>
-                                <FormLabel className='font-normal'>!</FormLabel>
-                                <FormMessage />
-                              </FormItem>
-                            )}
-                          />
+                           <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
+                             <FormField
+                              control={form.control}
+                              name="lookingFor"
+                              render={({ field }) => (
+                                 <FormItem>
+                                  <FormControl>
+                                      <Select onValueChange={field.onChange} defaultValue={field.value}>
+                                          <SelectTrigger className="inline-block w-auto min-w-[200px] bg-transparent border-0 border-b rounded-none text-xl md:text-2xl px-1 h-auto py-1 focus:ring-0 focus:ring-offset-0 text-muted-foreground data-[placeholder]:text-muted-foreground">
+                                              <SelectValue placeholder="Select Dropdown" />
+                                          </SelectTrigger>
+                                          <SelectContent>
+                                              <SelectItem value="full-time-role">a full-time role</SelectItem>
+                                              <SelectItem value="freelance-project">a freelance project</SelectItem>
+                                              <SelectItem value="collaboration">a collaboration</SelectItem>
+                                              <SelectItem value="just-to-say-hi">just to say hi</SelectItem>
+                                          </SelectContent>
+                                      </Select>
+                                  </FormControl>
+                                 </FormItem>
+                              )}
+                              />
+                             <FormMessage className='w-full' />
+                           </div>
+
+                          <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
+                            <FormField
+                              control={form.control}
+                              name="email"
+                              render={({ field }) => (
+                                <FormItem className='flex items-center gap-2'>
+                                  <FormLabel className='font-normal'>Get in touch with me at</FormLabel>
+                                  <FormControl>
+                                    <Input placeholder="Your Email ID Here" {...field} className="inline-block w-auto min-w-[200px] bg-transparent border-0 border-b rounded-none text-xl md:text-2xl px-1 focus-visible:ring-0 focus-visible:ring-offset-0"/>
+                                  </FormControl>
+                                  <FormLabel className='font-normal'>!</FormLabel>
+                                </FormItem>
+                              )}
+                            />
+                            <FormMessage className='w-full' />
+                          </div>
                         </div>
                         
                         <Button type="submit" size="lg" className="w-full text-base" disabled={form.formState.isSubmitting}>
