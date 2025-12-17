@@ -18,7 +18,7 @@ type AnimatedProps = {
 export function Animated({
   children,
   delay = 0,
-  duration = 0.8,
+  duration = 1.2,
   y = 50,
   x = 0,
   opacity = 0,
