@@ -21,54 +21,79 @@ const aboutMeContext = `
   Accomplished Full Stack Developer and E-Commerce Specialist. Successfully developed a million-euro web application that increased revenue by 35%, improved customer engagement by 50%, and optimized conversion rates by 30% using sales funnel techniques. Skilled in PHP, NodeJS, Symfony, Laravel, Java, Python, AngularJS, ReactJS, and cloud infrastructure, with expertise in API integrations, DevOps, CI/CD pipelines, and database performance optimization. Proven ability to lead cross functional team of 5, streamline development processes, and deliver scalable, high performing applications.
 
   KEY SKILLS
-  - HTML5, CSS3
-  - Cloud Infrastructure
-  - RESTful APIs/WebSockets
-  - PHP/JavaScript
-  - Shopify/WooCommerce
-  - Payment Gateways
-  - Digital Marketing /SEO
-  - Figma, Adobe XD
-  - Git, GitHub
+  - HTML5, CSS3, JavaScript, PHP, Java, Python
+  - ReactJS, AngularJS, NodeJS, Symfony, Laravel
+  - Cloud Infrastructure (AWS, Google Cloud)
+  - E-commerce Platforms: Shopify, WooCommerce, Magento
+  - Databases: MySQL, PostgreSQL, MongoDB, AS400/DB2
+  - APIs: RESTful APIs, WebSockets, GraphQL, API Integration
+  - Tools: Git, GitHub, Figma, Adobe XD, Odoo, SAP, Oracle
+  - Expertise: Digital Marketing, SEO, DevOps, CI/CD, Payment Gateways, System Design, Workflow Automation
 
   RELEVANT PROFESSIONAL EXPERIENCE
 
   Full Stack Developer (Sep 2024 – May 2025)
   Sunniva Solar GMBH - Business Bay, Dubai
-  Results-driven Full Stack Developer with extensive experience in developing, deploying, and maintaining secure and scalable web applications. Proven ability to provide technical leadership, architect robust system designs, and optimize database performance. Adept at collaborating with cross-functional teams to translate business requirements into functional solutions, ensuring high-quality standards thorough testing and debugging.
-  - Web Application Development: Architect, develop, and maintain responsive, high-performance web applications and e-commerce platforms.
-  - E-commerce Platforms: Manage and customize Shopify, WooCommerce, and Magento, implementing optimized online shopping carts, payment gateways, and product catalogs.
-  - Server & Cloud Management: Deploy, monitor, and scale applications on AWS and Google Cloud, ensuring security and performance optimization.
-  - API Development & Integration: Design and implement RESTful and GraphQL APIs, integrating third-party services for enhanced functionality.
-  - Version Control: Utilized Git and GitHub for managing code changes and collaborating across departments.
-  - Database Management: Administer MySQL, PostgreSQL, and MongoDB, optimizing queries and enhancing performance.
-  - Team Leadership & Mentorship: Guide and mentor junior developers, conduct code reviews, and enforce best development practices to drive continuous improvement.
-    - Led a team of 10 junior developers, enhancing team productivity by 25%.
-    - Integrated secure payment gateways, improving transaction success rates by 30%.
+  Architect, develop, and maintain responsive, high-performance web applications and e-commerce platforms. Manage and customize Shopify, WooCommerce, and Magento. Deploy, monitor, and scale applications on AWS and Google Cloud. Design and implement RESTful and GraphQL APIs. Led a team of 10 junior developers, enhancing team productivity by 25%.
 
   Full Stack Developer (Jun 2022 - Sep 2024)
   Middle East Fuji Group LLC - Al Quoz, Dubai
-  Full Stack Developer with expertise in both static and e-commerce websites. Bring experience in training and mentoring junior web developers. The role involves working with a group of companies, ensuring the seamless operation of their online platforms. Extensive knowledge in various e-commerce platforms, AWS servers, Google Cloud, 3rd party APIs, CodeIgniter programs, and database management.
-  - Web Development: Design, develop, and maintain static and e-commerce websites for a group of companies. - Implement responsive and user-friendly interfaces to enhance the user experience. - Collaborate with UI/UX designers to translate design wireframes into functional web applications.
-  - E-commerce Platforms: Managed and customized e-commerce platforms such as Shopify, and WooCommerce, ensuring optimal performance. - Implemented and optimized online shopping carts, payment gateways, and product catalogs. - Stayed updated on emerging trends and technologies in e-commerce.
-  - Server Management: Deploy, manage, and monitor AWS and Google Cloud applications. - Ensure server security, scalability, and performance.
-  - Training and Mentorship: Provide training and mentorship to web developers, fostering skill development and knowledge transfer. - Conduct code reviews to maintain coding standards and best practices.
-  - API Integration: Integrate 3rd party APIs to enhance website functionality and connectivity. - Troubleshoot and debug API-related issues.
-  - Database Management: Utilized SQL and MySQL for efficient database management. - Optimized database queries and performance.
+  Designed, developed, and maintained static and e-commerce websites. Managed Shopify and WooCommerce platforms. Deployed and managed applications on AWS and Google Cloud servers. Provided training and mentorship to junior web developers. Integrated internal systems like Oracle, Odoo, and SAP.
 
   Web Developer (Jan 2018 – Mar 2022)
   BroCrypt - Sri Lanka
-  - Utilized HTML, CSS, and JavaScript to create 100+ responsive landing pages for clients.
-  - Used workspaces to promote efficient asynchronous and synchronous work for increased efficiency.
-  - Maintained graphic standards and branding throughout the product’s interfaces.
-  - Implemented SEO strategies for acquisition up by an average of 200% each month.
+  Utilized HTML, CSS, and JavaScript to create 100+ responsive landing pages. Maintained graphic standards and branding. Implemented SEO strategies, increasing acquisition by an average of 200% each month.
 
   Full Stack Developer (Jan 2018 - Jan 2020)
   Saninro Tech - Sri Lanka
-  - Worked with Quality Assurance to get new pages/products tested, and addressed any issues within 48 hours.
-  - Rewrote HTML to meet industry and company standards for SEO and Accessibility.
-  - Building beautiful user interface for hotel system without compromising functionality for aesthetics.
-  - Developed 3 WordPress sites with testing, deployment, and updates.
+  Worked with QA to test new pages and products. Rewrote HTML for SEO and Accessibility. Built user interfaces for hotel systems and developed 3 WordPress sites.
+
+  PROJECT DETAILS
+
+  1.  Uber E-Visa (Visa Service Platform)
+      - Description: A comprehensive platform for online visa application and processing, offering services for visit visas, pick & drop, cruises, and resort bookings. It automates much of the application workflow to ensure speed and accuracy.
+      - Key Features: Dynamic visa forms, secure document uploads, integrated travel service booking, automated status updates.
+      - Technologies: React, Node.js, Express, MongoDB, REST API.
+
+  2.  Diaflower (E-commerce Flower Shop)
+      - Description: A visually-driven e-commerce platform for a boutique flower shop, focusing on a simple, elegant user experience.
+      - Key Features: Visually-rich product catalog, custom bouquet builder, scheduled delivery, secure payment integration.
+      - Technologies: Shopify, Liquid, JavaScript, CSS3, Figma.
+
+  3.  Human Resource Management System (HRMS)
+      - Description: Developed and implemented a comprehensive HRMS to manage employee lifecycle, payroll, and performance tracking. Integrated internal systems like Oracle, Odoo, and SAP to streamline cross-functional workflows and create a single source of truth for employee data.
+      - Key Features: Centralized employee database, automated payroll, performance management workflows, seamless integration with Oracle, Odoo, and SAP.
+      - Technologies: Python, Odoo, SAP Integration, Oracle DB, XML-RPC, JavaScript.
+
+  4.  PreCASPrep (University Interview Practice Platform)
+      - Description: A web platform for university applicants to practice for admissions interviews with expert feedback and progress tracking.
+      - Key Features: Realistic video interview simulations, expert feedback and scoring, progress tracking, library of common interview questions.
+      - Technologies: ReactJS, Node.js, MongoDB, WebRTC, Stripe API.
+
+  5.  Emirates Secretarial Services (ESS / KBC)
+      - Description: A digital one-stop-shop for entrepreneurs setting up businesses in Dubai, simplifying company formation, visa applications, and other government services.
+      - Key Features: Guided business setup wizard, secure document management, online payment processing, real-time application tracking.
+      - Technologies: Laravel, MySQL, Vue.js, Google Cloud, Git.
+
+  6.  Atlas Document Attestation
+      - Description: An online portal for individuals and businesses to get documents legally attested for use in the UAE and abroad, streamlining submission, payment, and tracking.
+      - Key Features: Online document submission/verification, integration with government bodies, secure payment gateway, courier service integration.
+      - Technologies: PHP, CodeIgniter, JavaScript, MySQL, API Integration.
+
+  7.  Hidayath Heavy Industry
+      - Description: A comprehensive B2B digital platform for a global leader in metal fabrication, serving as a vital tool for sales, marketing, and client communication.
+      - Key Features: Extensive project portfolio, detailed service showcase, RFQ forms, SEO optimization.
+      - Technologies: WordPress, HTML5, CSS3, JavaScript, SEO.
+
+  8.  Hello Tara Rose
+      - Description: A personal branding website and client management portal for a professional astrologer and life coach, with integrated booking and payment systems.
+      - Key Features: Online booking/scheduling, e-commerce for digital products, blog/CMS, client testimonials.
+      - Technologies: Shopify, Liquid, JavaScript, Figma.
+
+  9.  Warehouse Management System (WMS)
+      - Description: Streamlined an end-to-end international business workflow, from data upload in Dubai to order processing in the Philippines, quotation approval, warehouse fulfillment, and final delivery.
+      - Key Features: End-to-end workflow automation, real-time inventory/order tracking, integration with legacy AS400 systems, automated quotation process.
+      - Technologies: Odoo, Python, AS400/DB2, XML, JavaScript.
 
   EDUCATION
   - Computer Science, Bachelor of Science (2023) - Girne American University, Cyprus
