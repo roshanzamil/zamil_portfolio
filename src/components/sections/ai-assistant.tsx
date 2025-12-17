@@ -21,6 +21,12 @@ const initialMessage: Message = {
   content: "Hello! I'm RZM-AI, Roshan Zamil Moulana's AI assistant. How can I help you today regarding Roshan's portfolio?"
 };
 
+const trialQuestions = [
+  "What is Roshan's primary area of expertise?",
+  "Tell me about his experience with e-commerce platforms.",
+  "What was his role at Sunniva Solar?",
+];
+
 export default function AiAssistantSection() {
   const [messages, setMessages] = useState<Message[]>([initialMessage]);
   const [input, setInput] = useState("");
@@ -38,14 +44,17 @@ export default function AiAssistantSection() {
     }
   }, [messages]);
 
-  const handleSubmit = async (e: FormEvent) => {
-    e.preventDefault();
-    if (!input.trim()) return;
+  const handleSendMessage = async (messageContent: string) => {
+    if (!messageContent.trim()) return;
 
     setIsLoading(true);
-    const userMessage: Message = { role: "user", content: input };
+    const userMessage: Message = { role: "user", content: messageContent };
     setMessages((prev) => [...prev, userMessage]);
-    setInput("");
+    
+    // Clear input if the message came from the input field
+    if (input === messageContent) {
+      setInput("");
+    }
 
     try {
       // Filter out the initial message before sending to the AI
@@ -54,7 +63,7 @@ export default function AiAssistantSection() {
         content: msg.content
       }));
 
-      const response = await askMyAssistant({ history: [...history, { role: 'user', content: input }] });
+      const response = await askMyAssistant({ history: [...history, { role: 'user', content: messageContent }] });
       const assistantMessage: Message = { role: "assistant", content: response.answer };
       setMessages((prev) => [...prev, assistantMessage]);
     } catch (error) {
@@ -68,6 +77,16 @@ export default function AiAssistantSection() {
       setIsLoading(false);
     }
   };
+
+  const handleSubmit = (e: FormEvent) => {
+    e.preventDefault();
+    handleSendMessage(input);
+  };
+  
+  const handleTrialQuestionClick = (question: string) => {
+    if (isLoading) return;
+    handleSendMessage(question);
+  }
 
   return (
     <section id="ai-assistant" className="w-full py-16 md:py-24 lg:py-32 bg-muted/30 overflow-hidden">
@@ -137,12 +156,19 @@ export default function AiAssistantSection() {
                 )}
               </div>
             </ScrollArea>
-            <div className="p-4 border-t">
+            <div className="p-4 border-t space-y-3">
+              <div className="flex flex-wrap gap-2 justify-center">
+                {trialQuestions.map((q) => (
+                    <Button key={q} variant="outline" size="sm" onClick={() => handleTrialQuestionClick(q)} disabled={isLoading} className="text-xs sm:text-sm">
+                        {q}
+                    </Button>
+                ))}
+              </div>
               <form onSubmit={handleSubmit} className="flex gap-2">
                 <Input
                   value={input}
                   onChange={(e) => setInput(e.target.value)}
-                  placeholder="Ask a question..."
+                  placeholder="Or type your own question..."
                   className="flex-1"
                   disabled={isLoading}
                 />
