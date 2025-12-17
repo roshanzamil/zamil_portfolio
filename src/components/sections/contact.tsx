@@ -5,12 +5,12 @@ import { Animated } from '@/components/ui/animated';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
 import { useToast } from '@/hooks/use-toast';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 
 const contactInfo = [
     {
@@ -33,9 +33,9 @@ const contactInfo = [
 ]
 
 const formSchema = z.object({
-  name: z.string().min(2, { message: "Name must be at least 2 characters." }),
+  name: z.string().min(2, { message: "Please enter your name." }),
+  lookingFor: z.string({ required_error: "Please select an option." }),
   email: z.string().email({ message: "Please enter a valid email address." }),
-  message: z.string().min(10, { message: "Message must be at least 10 characters." }),
 });
 
 export default function ContactSection() {
@@ -46,7 +46,6 @@ export default function ContactSection() {
     defaultValues: {
       name: "",
       email: "",
-      message: "",
     },
   });
  
@@ -54,7 +53,7 @@ export default function ContactSection() {
     console.log(values);
     toast({
       title: "Message Sent!",
-      description: "Thanks for reaching out. I'll get back to you soon.",
+      description: `Thanks for reaching out, ${values.name}. I'll get back to you soon.`,
     });
     form.reset();
   }
@@ -98,46 +97,61 @@ export default function ContactSection() {
                 </CardHeader>
                 <CardContent>
                     <Form {...form}>
-                      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-                        <FormField
-                          control={form.control}
-                          name="name"
-                          render={({ field }) => (
-                            <FormItem>
-                              <FormLabel>Your Name</FormLabel>
-                              <FormControl>
-                                <Input placeholder="John Doe" {...field} />
-                              </FormControl>
-                              <FormMessage />
-                            </FormItem>
-                          )}
-                        />
-                        <FormField
-                          control={form.control}
-                          name="email"
-                          render={({ field }) => (
-                            <FormItem>
-                              <FormLabel>Your Email</FormLabel>
-                              <FormControl>
-                                <Input placeholder="john.doe@example.com" {...field} />
-                              </FormControl>
-                              <FormMessage />
-                            </FormItem>
-                          )}
-                        />
-                        <FormField
-                          control={form.control}
-                          name="message"
-                          render={({ field }) => (
-                            <FormItem>
-                              <FormLabel>Your Message</FormLabel>
-                              <FormControl>
-                                <Textarea placeholder="Hi Roshan, I'd like to talk about..." {...field} rows={5} />
-                              </FormControl>
-                              <FormMessage />
-                            </FormItem>
-                          )}
-                        />
+                      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+                        <div className="text-xl md:text-2xl space-y-8">
+                          <FormField
+                            control={form.control}
+                            name="name"
+                            render={({ field }) => (
+                              <FormItem className='flex items-center gap-2 flex-wrap'>
+                                <FormLabel className='font-normal'>Hey, my name is</FormLabel>
+                                <FormControl>
+                                  <Input placeholder="Type Here" {...field} className="inline-block w-auto min-w-[150px] bg-transparent border-0 border-b rounded-none text-xl md:text-2xl px-2 focus-visible:ring-0 focus-visible:ring-offset-0"/>
+                                </FormControl>
+                                <FormLabel className='font-normal'>and I'm looking for</FormLabel>
+                                <FormMessage />
+                              </FormItem>
+                            )}
+                          />
+                           <FormField
+                            control={form.control}
+                            name="lookingFor"
+                            render={({ field }) => (
+                               <FormItem className='flex items-center gap-2 flex-wrap'>
+                                <FormControl>
+                                    <Select onValueChange={field.onChange} defaultValue={field.value}>
+                                        <SelectTrigger className="inline-block w-auto min-w-[200px] bg-transparent border-0 border-b rounded-none text-xl md:text-2xl px-2 focus:ring-0 focus:ring-offset-0 text-muted-foreground data-[placeholder]:text-muted-foreground">
+                                            <SelectValue placeholder="Select Dropdown" />
+                                        </SelectTrigger>
+                                        <SelectContent>
+                                            <SelectItem value="full-time-role">a full-time role</SelectItem>
+                                            <SelectItem value="freelance-project">a freelance project</SelectItem>
+                                            <SelectItem value="collaboration">a collaboration</SelectItem>
+                                            <SelectItem value="just-to-say-hi">just to say hi</SelectItem>
+                                        </SelectContent>
+                                    </Select>
+                                </FormControl>
+                                <FormMessage />
+                               </FormItem>
+                            )}
+                            />
+
+                          <FormField
+                            control={form.control}
+                            name="email"
+                            render={({ field }) => (
+                              <FormItem className='flex items-center gap-2 flex-wrap'>
+                                <FormLabel className='font-normal'>Get in touch with me at</FormLabel>
+                                <FormControl>
+                                  <Input placeholder="Your Email ID Here" {...field} className="inline-block w-auto min-w-[200px] bg-transparent border-0 border-b rounded-none text-xl md:text-2xl px-2 focus-visible:ring-0 focus-visible:ring-offset-0"/>
+                                </FormControl>
+                                <FormLabel className='font-normal'>!</FormLabel>
+                                <FormMessage />
+                              </FormItem>
+                            )}
+                          />
+                        </div>
+                        
                         <Button type="submit" size="lg" className="w-full text-base" disabled={form.formState.isSubmitting}>
                            {form.formState.isSubmitting ? 'Sending...' : 'Send Message'} <Send className="ml-2 h-4 w-4"/>
                         </Button>
