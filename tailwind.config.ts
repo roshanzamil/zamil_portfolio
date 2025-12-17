@@ -10,7 +10,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        body: ['Inter', 'sans-serif'],
+        body: ['"Bebas Neue"', 'sans-serif'],
         headline: ['"Bebas Neue"', 'sans-serif'],
         code: ['monospace'],
       },
