@@ -22,14 +22,15 @@ export default function HeroSection() {
                 className="rounded-full object-cover border-4 border-primary shadow-lg"
                 data-ai-hint={avatar.imageHint}
                 priority
+                unoptimized
               />
             </Animated>
           )}
           <div className="space-y-2">
-            <Animated as="h1" delay={0.3} className="text-5xl font-bold sm:text-6xl md:text-7xl lg:text-8xl text-primary">
+            <Animated as="h1" delay={0.3} className="text-5xl font-bold sm:text-6xl md:text-7xl lg:text-8xl text-primary font-headline">
               Roshan Zamil Moulana
             </Animated>
-            <Animated as="p" delay={0.4} className="max-w-[700px] mx-auto text-foreground/80 text-base md:text-lg">
+            <Animated as="p" delay={0.4} className="max-w-[700px] mx-auto text-foreground/80 text-lg md:text-xl font-headline">
               Full Stack Developer – E-Commerce Specialist
             </Animated>
           </div>
