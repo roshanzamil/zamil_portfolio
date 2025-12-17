@@ -5,6 +5,8 @@ import { cn } from '@/lib/utils';
 import Header from '@/components/layout/header';
 import Footer from '@/components/layout/footer';
 import { GsapProvider } from '@/components/providers/gsap-provider';
+import { Suspense } from 'react';
+import Loading from './loading';
 
 export const metadata: Metadata = {
   title: 'Roshan Zamil Moulana | Full Stack Developer',
@@ -27,7 +29,11 @@ export default function RootLayout({
         <GsapProvider>
           <div className="flex flex-col min-h-svh">
             <Header />
-            <main className="flex-1">{children}</main>
+            <main className="flex-1">
+              <Suspense fallback={<Loading />}>
+                {children}
+              </Suspense>
+            </main>
             <Footer />
           </div>
           <Toaster />
