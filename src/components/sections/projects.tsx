@@ -38,15 +38,7 @@ const projects = [
     description: 'Industrial-grade digital experience for a global metal fabrication leader.',
     image: PlaceHolderImages.find((img) => img.id === 'hidayath')?.imageUrl || '',
     tags: ['Problem Research', 'Website Development', 'Tracking Configuration'],
-    liveUrl: '#',
-  },
-  {
-    title: 'Intertech International Trading',
-    subtitle: 'Web solution for a premium glass supplier',
-    description: 'Comprehensive web solution for a premium glass supplier.',
-    image: PlaceHolderImages.find((img) => img.id === 'intertech')?.imageUrl || '',
-    tags: ['Website Development', 'Tracking Configuration'],
-    liveUrl: '#',
+    liveUrl: 'https://www.industrialsolution.ae/',
   },
   {
     title: 'Hello Tara Rose',
