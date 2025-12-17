@@ -1,4 +1,4 @@
 import { config } from 'dotenv';
-config();
+config({ override: true });
 
 import '@/ai/flows/about-me-assistant.ts';
