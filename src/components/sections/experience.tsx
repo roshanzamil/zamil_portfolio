@@ -5,7 +5,7 @@ import { Animated } from '@/components/ui/animated';
 const experiences = [
   {
     company: 'Sunniva Solar GMBH',
-    role: 'Full Stack Developer',
+    role: 'Senior Software developer',
     period: 'Sep 2024 – May 2025',
     description: 'Architect, develop, and maintain responsive, high-performance web applications and e-commerce platforms. Manage and customize Shopify, WooCommerce, and Magento. Deploy, monitor, and scale applications on AWS and Google Cloud. Design and implement RESTful and GraphQL APIs. Led a team of 10 junior developers, enhancing team productivity by 25%.',
     tags: ['PHP', 'NodeJS', 'Symfony', 'Laravel', 'Java', 'Python', 'AngularJS', 'ReactJS', 'AWS', 'GCP', 'Shopify', 'WooCommerce'],

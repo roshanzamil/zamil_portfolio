@@ -32,7 +32,7 @@ const aboutMeContext = `
 
   RELEVANT PROFESSIONAL EXPERIENCE
 
-  Full Stack Developer (Sep 2024 – May 2025)
+  Senior Software developer (Sep 2024 – May 2025)
   Sunniva Solar GMBH - Business Bay, Dubai
   Architect, develop, and maintain responsive, high-performance web applications and e-commerce platforms. Manage and customize Shopify, WooCommerce, and Magento. Deploy, monitor, and scale applications on AWS and Google Cloud. Design and implement RESTful and GraphQL APIs. Led a team of 10 junior developers, enhancing team productivity by 25%.
 
